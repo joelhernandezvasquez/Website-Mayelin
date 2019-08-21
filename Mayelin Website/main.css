@@ -66,8 +66,23 @@
     justify-content: center;
     border-radius: 20px;
     cursor:pointer;
+    transition:border-radius 0.5s,background 0.3s,color 0.3s;
+}
+.btn:hover
+{
+    border-radius:0px;
+    background:white;
+    color:var(--primary-background-color);
 }
 
+.error-message
+{
+    color:red;
+    font-size: 16px;
+    font-family: var(--secondary-font);
+    margin:0px 0px 0px 10px;
+    display:none;
+}
 
 
 /* MOBILE LAYOUT */
@@ -188,6 +203,7 @@
     z-index:2;
     margin-top:70px;
     transform:translateX(405px);
+    transition:transform 0.5s;
 }
 
 .form
@@ -238,7 +254,7 @@ select
     border-radius: 5px;
 
 }
-input[type="text"]:focus
+input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
 {
     border-color:var(--primary-background-color);
 }
@@ -260,6 +276,11 @@ input[type="text"]:focus
     border-radius: 10px;
     cursor:pointer;
     margin:10px 0px 10px 20px;
+}
+
+.openAppointmentForm.appointment-container
+{
+    transform: translateX(20px);
 }
 
 
