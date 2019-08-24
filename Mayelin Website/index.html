@@ -51,7 +51,7 @@
            <h1>Haz Tu Cita</h1>
            <h2>llama al 809-447-9942</h2>
         
-           <form action="index.html" method="post" id="form-appointment" >
+           <form action="#" method="post" id="form-appointment" >
 
           
            <label for="name">Nombre:</label>
@@ -128,8 +128,7 @@ const menuIcon = document.querySelector(".hamburger-icon-container");
 const btnAppointment = document.querySelector(".btn");
 const closebtn = document.querySelector("#close-icon");
 const formulario = document.querySelector("#form-appointment");
-
-
+const btnSubmit = document.querySelector("#submit");
 
 menuBar.addEventListener("mouseover",hoverMenuItems);
 menuBar.addEventListener("mouseout",hoverOutMenuItems);
@@ -137,7 +136,9 @@ menuBar.addEventListener("mouseover",hoverLinks);
 menuIcon.addEventListener("click",openMenuBar);
 btnAppointment.addEventListener("click",openAppointmentForm);
 closebtn.addEventListener("click",closeAppointmentForm);
-formulario.addEventListener("submit",submitAppointment)
+formulario.addEventListener("submit",submitAppointment);
+
+
 
 
 

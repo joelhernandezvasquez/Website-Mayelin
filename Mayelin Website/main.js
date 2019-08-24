@@ -1,9 +1,6 @@
 
 //GLOBAL VARIABLES FOR APPOINTMENT Form
 
-
-
-
 function hoverMenuItems(e)
 {
   if(e.target.closest("li"))
@@ -49,19 +46,22 @@ function openAppointmentForm(e)
 function closeAppointmentForm()
 {
   const appointmentForm = document.querySelector(".appointment-container");
+  const fullName = document.querySelector("#name");
+  const email = document.querySelector("#email");
+  
+  fullName.value="";
+  email.value ="";
   appointmentForm.classList.remove("openAppointmentForm");
+
 }
 
 function submitAppointment(e)
 {
- e.preventDefault();
 
  const fullName = document.querySelector("#name");
  const email = document.querySelector("#email");
  const nameErrorMessage = document.querySelector("#nameError");
  const emailErrorMessage = document.querySelector("#emailError");
-
-
   const name = fullName.value.trim();
   const emailInput = email.value.trim();
 
@@ -69,23 +69,23 @@ function submitAppointment(e)
  {
    nameErrorMessage.style.display ="block";
    fullName.focus();
-   return;
+   e.preventDefault();
+  
+ }
+ else
+ {
+  nameErrorMessage.style.display ="none";
  }
 
  if(!emailInput)
  {
   emailErrorMessage.style.display ="block";
   email.focus();
-  return;
+  e.preventDefault();
  }
-
-this.unbind().submit();
-
-
-
-
- //fullName.value = " ";
- //email.value = " ";
+ else
+ {
+  emailErrorMessage.style.display ="none";
+ }
  
-
 }
