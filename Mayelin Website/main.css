@@ -50,6 +50,14 @@
    color:var(--primary-color);
 }
 
+.heading
+{
+    color:var(--primary-background-color);
+    font-family: var(--primary-font);
+    text-align: center;
+    font-size: 2.2rem;
+}
+
 .btn
 {
     padding:20px;
@@ -92,7 +100,7 @@
     height:100vh;
     display:grid;
     grid-template-columns:1fr;
-    grid-template-rows: repeat(9,450px);
+    grid-template-rows: 450px 1200px 1600px repeat(6,450px);
     grid-gap:5px;
    grid-template-areas: 
     "header"
@@ -294,11 +302,97 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
     grid-area:about-us;
     background:green;
 }
+
+/* SERIVCES CONTAINER */
 .services-container
 {
     grid-area:services-container;
-    background:black;
+    /* border:1px solid black; */
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:100px repeat(3,490px);
+    grid-gap:5px;
+    grid-template-areas:
+    "heading-service" 
+    "manicure-container"
+    "pedicure-container"
+    "drinks-container";
 }
+
+.heading-service
+{
+    grid-area:heading-service;
+   /* border:1px solid silver; */
+}
+
+.manicure-container
+{
+    grid-area:manicure-container;
+    /* border:1px solid blue; */
+}
+.pedicure-container
+{
+    grid-area:pedicure-container;
+    /* border:1px solid red; */
+}
+
+
+.drinks-container
+{
+    grid-area:drinks-container;
+    /* border:1px solid yellow; */
+}
+
+.service-card
+{
+    width:97%;
+    height:480px;
+    margin-left:auto;
+    margin-right:auto;
+    /* border:1px solid red; */
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 230px 250px;
+    grid-template-areas:
+    "service-card-header"
+    "service-card-body";
+    grid-gap:0px;
+}
+
+.service-card-header
+{
+  grid-area:service-card-header;
+    width:100%;
+}
+.service-card-header img
+{
+  max-width: 100%;
+}
+.service-card-body
+{
+    grid-area:service-card-body;
+    background:var(--primary-background-color);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-card-body h2
+{
+    margin-top:10px;
+    font-size:1.8rem;
+}
+.service-card-body h1
+{
+    font-size: 2.5rem;
+    margin-top:0px;
+}
+.service-card-body button
+{
+    background:white;
+    color:var(--primary-background-color);
+}
+
 .products-container
 {
     grid-area:products-container;
