@@ -1,0 +1,544 @@
+:root
+{
+    --primary-color:white;
+    --primary-background-color:#e75aa1;
+    --primary-font:'Pacifico', cursive;
+    --secondary-font:'Open Sans', sans-serif;
+}
+
+/* GENERIC ID AND CLASS */
+
+
+.hamburger-icon-container
+{
+    display:inline-block;
+    cursor:pointer;
+    margin-top:5px;
+    
+}
+.bar1, .bar2, .bar3
+{
+    width:3rem;
+    height:4px;
+    background-color: white;
+    margin:10px 10px;
+    transition:transform 0.2s ease-out;
+}
+
+.welcome-message-container
+{
+   
+    height:300px;
+    margin-top:45px;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+#logo-brand
+{
+    width: 60px;
+    height:60px;
+    float:right;
+    margin:5px 20px 0px 0px;
+    border-radius:50%;
+}
+
+.font-style
+{
+   font-family: 'Pacifico', cursive;
+   color:var(--primary-color);
+}
+
+.heading
+{
+    color:var(--primary-background-color);
+    font-family: var(--primary-font);
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+.btn
+{
+    padding:20px;
+    width:220px;
+    height:50px;
+    background:var(--primary-background-color);
+    font-family: var(--primary-font);
+    font-size: 1.7rem;
+    color:var(--primary-color);
+    border:none;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    cursor:pointer;
+    transition:border-radius 0.5s,background 0.3s,color 0.3s;
+}
+.btn:hover
+{
+    border-radius:0px;
+    background:white;
+    color:var(--primary-background-color);
+}
+
+.error-message
+{
+    color:red;
+    font-size: 16px;
+    font-family: var(--secondary-font);
+    margin:0px 0px 0px 10px;
+    display:none;
+}
+
+.responsive-images
+{
+    max-width: 100%;
+}
+
+/* MOBILE LAYOUT */
+
+.wrapper
+{
+    height:100vh;
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows: 450px auto 1600px  2200px 2500px repeat(4,450px);
+    grid-gap:10px;
+   grid-template-areas: 
+    "header"
+    "about-us"
+    "services-container"
+    "products-container"
+    "gallery-container"
+    "testimony-container"
+    "contact-container"
+    "horario-container"
+    "footer";
+}
+
+.header
+{
+    grid-area:header;
+    background:linear-gradient(to bottom left,#e75aa1,transparent 140% ),url("img/background.jpg"),no-repeat;
+   background-size:cover;
+   background-position-y:15%;
+
+}
+.header h2
+{
+    font-size:1.8rem;
+    margin-bottom: 0px;
+}
+.header h1
+{
+    font-size:2rem;
+    margin-top:0px;
+}
+
+/* NAVIGATION BAR */
+
+.menu-bar
+{
+    width:320px;
+    height:500px;
+    background:white;
+    position:absolute;
+    top:70px;
+    transform:translateX(-320px);
+    z-index:2;
+    transition:transform 0.5s;
+}
+
+.menu-bar ul
+{
+    padding:0px;
+}
+.menu-bar li
+{
+    list-style-type: none;
+    font-family: var(--secondary-font);
+    font-size: 1.3rem;
+    margin:10px 0px 20px 0px;
+    padding:10px;
+     transition:background 0.5s ease-out; 
+}
+.menu-bar li:hover
+{
+    background:var(--primary-background-color);
+}
+
+.menu-bar a
+{
+    text-decoration: none;
+    color:var(--primary-background-color);
+    margin-left:20px;
+}
+
+.open-menu-bar.menu-bar
+{
+    transform:translateX(2px);
+   
+}
+
+/* Rotate first bar */
+ .change .bar1 {
+     transform: rotate(-45deg) translate(-9px, 6px); 
+  }
+  
+  /* Fade out the second bar */
+  .change .bar2 {
+    opacity: 0;
+  }
+  
+  /* Rotate last bar */
+  .change .bar3 {
+   
+    transform: rotate(45deg) translate(-13px, -9px) ;
+  }
+
+
+
+/* END NAVIGATION BAR */
+
+
+/* APPOINMENT CONTAINER */
+
+.appointment-container
+{
+    width:85%;
+    height:auto;
+    border-radius: 10px;
+    background:white;
+    position:absolute;
+    z-index:2;
+    margin-top:70px;
+    transform:translateX(405px);
+    transition:transform 0.5s;
+}
+
+.form
+{
+    display: flex;
+    flex-direction: column;
+    margin:55px auto 0px auto;
+    
+}
+
+#close-icon
+{
+ width:50px;
+ float:right;
+ margin:5px 10px 0px 0px;
+}
+
+.appointment-container h1,h2
+{
+    color:var(--primary-background-color);
+    font-family: var(--primary-font);
+    margin-top:0px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+label
+{
+    font-family:var(--secondary-font);
+    font-size: 16px;
+    display:block;
+    margin:10px 0px 0px 20px;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea,
+select
+{
+    width:85%;
+    padding:10px;
+    margin:10px 0px 10px 20px;
+    margin-bottom:10px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    font-size: 16px;
+    border-radius: 5px;
+
+}
+input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
+{
+    border-color:var(--primary-background-color);
+}
+
+.appointment-container button
+{
+    padding:10px;
+    width:180px;
+    height:50px;
+    background:var(--primary-background-color);
+    font-family: var(--primary-font);
+    font-size: 1.5rem;
+    color:var(--primary-color);
+    border:none;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor:pointer;
+    margin:10px 0px 10px 20px;
+   
+    
+}
+
+
+.openAppointmentForm.appointment-container
+{
+    transform: translateX(20px);
+}
+
+
+/* END APPOINTMENT CONTAINER */
+
+.about-us
+{
+    grid-area:about-us;
+     /* border:1px solid green;  */
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:100px 460px 600px;
+    grid-gap:5px;
+    grid-template-areas: 
+    "title"
+    "about-us-picture"
+    "about-us-profile";
+    
+}
+.title
+{
+    grid-area:title;
+    /* border:1px solid red; */
+}
+.about-us-picture
+{
+    grid-area:about-us-picture;
+    /* border:1px solid blue; */
+}
+.about-us-picture img
+{
+    max-width:100%;
+   
+   
+    
+}
+.about-us-profile
+{
+    grid-area:about-us-profile;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border:1px solid black; */
+}
+
+.about-us-profile p
+{
+    font-family: var(--secondary-font);
+    font-size: 18px;
+    padding:0px 15px 10px 15px;
+    line-height: 1.7;
+   
+    
+}
+.about-us-profile button:hover
+{
+ background:var(--primary-background-color);
+ color:white;
+}
+
+/* SERIVCES CONTAINER */
+.services-container
+{
+    grid-area:services-container;
+    /* border:1px solid black; */
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:100px repeat(3,490px);
+    grid-gap:5px;
+    grid-template-areas:
+    "heading-service" 
+    "manicure-container"
+    "pedicure-container"
+    "drinks-container";
+    margin-top:50px;
+}
+
+.heading-service
+{
+    grid-area:heading-service;
+   /* border:1px solid silver; */
+}
+
+.manicure-container
+{
+    grid-area:manicure-container;
+    /* border:1px solid blue; */
+}
+.pedicure-container
+{
+    grid-area:pedicure-container;
+    /* border:1px solid red; */
+}
+
+
+.drinks-container
+{
+    grid-area:drinks-container;
+    /* border:1px solid yellow; */
+}
+
+.service-card
+{
+    width:97%;
+    height:480px;
+    margin-left:auto;
+    margin-right:auto;
+    /* border:1px solid red; */
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 230px 250px;
+    grid-template-areas:
+    "service-card-header"
+    "service-card-body";
+    grid-gap:0px;
+}
+
+.service-card-header
+{
+  grid-area:service-card-header;
+    width:100%;
+}
+.service-card-header img
+{
+  max-width: 100%;
+}
+.service-card-body
+{
+    grid-area:service-card-body;
+    background:var(--primary-background-color);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-card-body h2
+{
+    margin-top:10px;
+    font-size:1.8rem;
+}
+.service-card-body h1
+{
+    font-size: 2.5rem;
+    margin-top:0px;
+}
+.service-card-body button
+{
+    background:white;
+    color:var(--primary-background-color);
+}
+
+/* PRODUCTS CONTAINER  */
+.products-container
+{
+    margin-top:50px;
+    grid-area:products-container;
+    background:rgba(229, 230, 232, 0.76);
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap:10px;
+    /* border:1px solid red; */
+    
+    
+
+}
+.heading-products
+{
+    background:white;
+    height:100px;
+}
+
+.products-card
+{
+    width:320px;
+    height:350px;
+    border-radius:10px;
+    background:white;
+    margin-left:auto;
+    margin-right: auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.products-card h1
+{
+    font-size: 1.8rem;
+}
+.products-card h2
+{
+    font-family: var(--secondary-font);
+    font-size: 1.2rem;
+}
+.products-card img
+{
+    width:95%;
+    margin-top:10px;
+}
+.products-container button
+{
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.gallery-container
+{
+ grid-area:gallery-container;
+ background:pink;
+ display:grid;
+ grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+ 
+ 
+}
+
+.image-cards
+{
+   
+  
+}
+.testimony-container
+{
+    grid-area:testimony-container;
+    background:yellow;
+}
+.contact-container
+{
+    grid-area:contact-container;
+    background:purple;
+}
+.horario-container
+{
+    grid-area:horario-container;
+    background:brown;
+}
+.footer
+{
+    grid-area:footer;
+    background:#e75aa1;
+}
+
+@media(min-width:413px) 
+{
+    .about-us-profile p
+    {
+        padding:20px 15px 10px 15px; 
+    }
+}
