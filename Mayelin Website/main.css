@@ -104,7 +104,7 @@
     height:100vh;
     display:grid;
     grid-template-columns:1fr;
-    grid-template-rows: 450px auto 1600px  2200px 2200px  500px repeat(3,450px);
+    grid-template-rows: 450px auto 1600px  2200px 2200px  650px repeat(3,450px);
     grid-gap:10px;
    grid-template-areas: 
     "header"
@@ -556,30 +556,60 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
 .carrousel
 {
     grid-area:carrousel;
-    border:1px solid blue;
-    height:300px;
+   
+    height:370px;
     display:grid;
-    grid-template-columns: 0.5fr 1fr 0.5fr ;
+    grid-template-columns: 0.2fr 1.5fr 0.2fr ;
+    grid-template-rows: 350px 50px;
     grid-template-areas: 
     "left-arrow slide-container right-arrow"
+    "dots-container dots-container dots-container";
+    background:silver;
+    
 
 
 }
 .left-arrow
 {
     grid-area:left-arrow;
-    border:1px solid red;
+    /* border:1px solid red; */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow
+{
+   
+    border-radius: 50%;
+    width:30px;
 }
 .slide-container
 {
     grid-area:slide-container;
-    border:1px solid black;
+    /* border:1px solid black; */
 
+}
+.slide-container iframe
+{
+    width:100%;
+    height:75%;
+    
 }
 .right-arrow
 {
     grid-area:right-arrow;
-    border:1px solid red;
+    /* border:1px solid red; */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.dots-container
+{
+    grid-area:dots-container;
+    /* background:pink; */
 }
 
 .contact-container
