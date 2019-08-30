@@ -556,7 +556,7 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
 .carrousel
 {
     grid-area:carrousel;
-   
+    width:95%;
     height:370px;
     display:grid;
     grid-template-columns: 0.2fr 1.5fr 0.2fr ;
@@ -564,7 +564,11 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
     grid-template-areas: 
     "left-arrow slide-container right-arrow"
     "dots-container dots-container dots-container";
-    background:silver;
+    background:rgb(230, 220, 220);
+    margin-left:auto;
+    margin-right:auto;
+    border-radius:10px;
+    border:2px solid var(--primary-background-color);
     
 
 
