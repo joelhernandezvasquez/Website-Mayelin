@@ -97,6 +97,13 @@
     max-width: 100%;
 }
 
+.paragraph
+{
+    color:var(--primary-background-color);
+    font-family: var(--primary-font);
+    font-size: 16px;
+}
+
 /* MOBILE LAYOUT */
 
 .wrapper
@@ -104,7 +111,7 @@
     height:100vh;
     display:grid;
     grid-template-columns:1fr;
-    grid-template-rows: 450px auto 1600px  2200px 2200px  650px repeat(3,450px);
+    grid-template-rows: 450px auto 1600px  2200px 2200px  650px 580px 300px 450px;
     grid-gap:10px;
    grid-template-areas: 
     "header"
@@ -529,7 +536,7 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
 .testimony-container
 {
     grid-area:testimony-container;
-    border:1px solid yellow;
+    /* border:1px solid yellow; */
     display:grid;
     grid-template-columns:1fr;
     grid-template-areas:  
@@ -541,7 +548,7 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
 {
     grid-area:heading-testimony;
     height:180px;
-    border:1px solid red;
+    /* border:1px solid red; */
 }
 .heading-testimony h2
 {
@@ -556,27 +563,24 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
 .carrousel
 {
     grid-area:carrousel;
-    width:95%;
-    height:370px;
+    width:97%;
+    height:400px;
     display:grid;
     grid-template-columns: 0.2fr 1.5fr 0.2fr ;
-    grid-template-rows: 350px 50px;
+    grid-template-rows: 360px 40px;
     grid-template-areas: 
     "left-arrow slide-container right-arrow"
     "dots-container dots-container dots-container";
-    background:rgb(230, 220, 220);
+    background:rgba(229, 230, 232, 0.76);
     margin-left:auto;
     margin-right:auto;
-    border-radius:10px;
-    border:2px solid var(--primary-background-color);
-    
-
-
+    border-radius:5px;
+    /* border:2px solid var(--primary-background-color); */
 }
 .left-arrow
 {
     grid-area:left-arrow;
-    /* border:1px solid red; */
+     /* border:1px solid red; */
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -588,23 +592,30 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
    
     border-radius: 50%;
     width:30px;
+    
 }
+.arrow:hover
+{
+    background:white;
+}
+
 .slide-container
 {
     grid-area:slide-container;
+    margin-top:10px;
     /* border:1px solid black; */
 
 }
 .slide-container iframe
 {
     width:100%;
-    height:75%;
+    height:350px;
     
 }
 .right-arrow
 {
     grid-area:right-arrow;
-    /* border:1px solid red; */
+    /* border:1px solid red;  */
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -613,19 +624,81 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
 .dots-container
 {
     grid-area:dots-container;
-    /* background:pink; */
+     /* border:1px solid green;  */
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
 }
 
+.dot
+{
+    width:1.3rem;
+    height: 1.3rem;
+    margin:10px;
+    background: white;
+    border-radius: 100%;
+}
+
+
+/* CONTACT CONTAINER */
 .contact-container
 {
     grid-area:contact-container;
-    background:purple;
+    /* border:1px solid purple; */
+}
+.map
+{
+    width:100%;
+    
 }
 .horario-container
 {
     grid-area:horario-container;
-    background:brown;
+   
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "dirrection-contact"
+    "phone-contact"
+    "email-contact";
+    grid-gap:5px;
+
 }
+.dirrection-contact
+{
+    grid-area:dirrection-contact;
+    
+}
+.phone-contact
+{
+    grid-area:phone-contact;
+    
+}
+.email-contact
+{
+    grid-area:email-contact;
+    
+}
+
+.info-contact
+{
+    display:flex;
+    
+    align-items:center;
+    
+}
+#address-icon
+{
+    width:100px;
+    padding:15px;
+}
+.icon
+{
+    width:50px;
+    padding:15px;
+}
+
 .footer
 {
     grid-area:footer;
