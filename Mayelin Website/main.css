@@ -111,7 +111,7 @@
     height:100vh;
     display:grid;
     grid-template-columns:1fr;
-    grid-template-rows: 450px auto 1600px  2200px 2200px  650px 580px 300px 450px;
+    grid-template-rows: 450px auto 1600px  2200px 2200px  650px 580px 500px 340px;
     grid-gap:10px;
    grid-template-areas: 
     "header"
@@ -655,14 +655,15 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
 .horario-container
 {
     grid-area:horario-container;
-   
     display:grid;
     grid-template-columns: 1fr;
     grid-template-areas:
     "dirrection-contact"
     "phone-contact"
-    "email-contact";
+    "email-contact"
+    "schedule-box";
     grid-gap:5px;
+   
 
 }
 .dirrection-contact
@@ -679,6 +680,31 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
 {
     grid-area:email-contact;
     
+}
+.schedule-box
+{
+    grid-area:schedule-box;
+    background:var(--primary-background-color);
+    height:200px;
+    margin-top:20px;
+    color:white;
+    display:flex;
+    flex-direction: column;
+    font-family: var(--primary-font);
+   
+
+}
+.schedule-box h1
+{
+    text-align: center;
+}
+.schedule-box h2
+{
+    color:white;
+    font-family: var(--secondary-font);
+    text-align: left;
+    font-size: 18px;
+    margin:10px;
 }
 
 .info-contact
@@ -702,7 +728,46 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
 .footer
 {
     grid-area:footer;
-    background:#e75aa1;
+    background:var(--primary-background-color);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer h1
+{
+    color:white;
+    font-family: var(--primary-font);
+    font-size: 1.7rem;
+}
+#logo-brand-footer
+{
+    width:100px;
+    margin-top:10px;
+    border-radius:20px;
+}
+
+.social-media-container
+{
+height:50px;
+
+display:flex;
+width:100%;
+align-items:center;
+justify-content: space-around; 
+
+}
+.media-icon
+{
+ width:50px;
+ height:50px;
+}
+.footer p
+{
+   color:white;
+   text-align: center;
+   font-size: 16px;
+   font-family: var(--secondary-font);
+   margin-top:30px;
 }
 
 @media(min-width:413px) 
