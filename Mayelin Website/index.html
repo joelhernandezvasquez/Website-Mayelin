@@ -211,9 +211,38 @@
         <h1 class="heading">Gallery</h1>
        </div>
 
+       <div class="gallery-slide-show">
+         
+        <input type="image" src="img/iconfinder_error-fill_3017946.png" id="close-icon">
+         
+         <div class="carrousel-gallery-container">
+         
+          <div class="left-arrow-gallery">
+
+          </div>
+
+          <div class="track-container-gallery">
+
+            <div class="slide">
+
+            </div>
+          </div>
+
+          <div class="right-arrow-gallery">
+
+          </div>
+
+          <div class="dots-image-container">
+
+          </div>
+
+         </div>
+      </div>
+
+
       <div class="image-cards"> 
          
-        <img src="img/61959658_2401570853219567_3722258846169694208_n.jpg" class="responsive-images"> 
+        <img src="img/61959658_2401570853219567_3722258846169694208_n.jpg" class="responsive-images"data-image="1"> 
         <div class="image-overlay">
            <img src="img/iconfinder_Pinterest_UI-15_2540589.svg" id="magnify">
         </div>
@@ -221,38 +250,39 @@
       </div>
       
       <div class="image-cards"> 
-        <img src="img/67306991_2493057797404205_7867638431319326720_n.jpg" class="responsive-images">
+        <img src="img/67306991_2493057797404205_7867638431319326720_n.jpg" class="responsive-images" data-image="2">
         <div class="image-overlay">
             <img src="img/iconfinder_Pinterest_UI-15_2540589.svg" id="magnify">
          </div>
       </div>
 
       <div class="image-cards">   
-        <img src="img/67327718_2502763066433678_7677955255140614144_n.jpg" class="responsive-images"> 
+        <img src="img/67327718_2502763066433678_7677955255140614144_n.jpg" class="responsive-images" data-image="3"> 
         <div class="image-overlay">
             <img src="img/iconfinder_Pinterest_UI-15_2540589.svg" id="magnify">
          </div>
       </div>
       <div class="image-cards">  
-        <img src="img/67439993_2503675533009098_8098456527926460416_n.jpg" class="responsive-images">
+        <img src="img/67439993_2503675533009098_8098456527926460416_n.jpg" class="responsive-images" data-image="4">
         <div class="image-overlay">
             <img src="img/iconfinder_Pinterest_UI-15_2540589.svg" id="magnify">
          </div>
       </div>
       
       <div class="image-cards">  
-        <img src="img/67620428_2507509262625725_1255349911906418688_n.jpg" class="responsive-images">  
+        <img src="img/67620428_2507509262625725_1255349911906418688_n.jpg" class="responsive-images" data-image="5">  
         <div class="image-overlay">
             <img src="img/iconfinder_Pinterest_UI-15_2540589.svg" id="magnify">
          </div>
       </div>
      
-      <div class="image-cards">   <img src="img/66290528_2467362809973704_5262175488469630976_n.jpg" class="responsive-images">  
+      <div class="image-cards">   <img src="img/66290528_2467362809973704_5262175488469630976_n.jpg" class="responsive-images" data-image="6">  
         <div class="image-overlay">
             <img src="img/iconfinder_Pinterest_UI-15_2540589.svg" id="magnify">
          </div>
       </div>  
 
+     
     
     </div>  
 
@@ -353,6 +383,9 @@ const btnAppointment = document.querySelector(".btn");
 const closebtn = document.querySelector("#close-icon");
 const formulario = document.querySelector("#form-appointment");
 const btnSubmit = document.querySelector("#submit");
+const galleryContainer = document.querySelector(".gallery-container");
+
+
 
 menuBar.addEventListener("mouseover",hoverMenuItems);
 menuBar.addEventListener("mouseout",hoverOutMenuItems);
@@ -361,6 +394,7 @@ menuIcon.addEventListener("click",openMenuBar);
 btnAppointment.addEventListener("click",openAppointmentForm);
 closebtn.addEventListener("click",closeAppointmentForm);
 formulario.addEventListener("submit",submitAppointment);
+galleryContainer.addEventListener("click",openGallerySlideShow);
 
 
 

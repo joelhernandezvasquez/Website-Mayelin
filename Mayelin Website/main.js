@@ -89,3 +89,13 @@ function submitAppointment(e)
  }
  
 }
+
+function openGallerySlideShow(e)
+{
+  const gallerySlideShow = document.querySelector(".gallery-slide-show");
+
+  if(e.target.closest("img"))
+  {
+   gallerySlideShow.style.display ="block";
+  }
+}
