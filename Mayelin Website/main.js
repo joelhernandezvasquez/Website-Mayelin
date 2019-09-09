@@ -96,6 +96,14 @@ function openGallerySlideShow(e)
 
   if(e.target.closest("img"))
   {
-   gallerySlideShow.style.display ="block";
+   //gallerySlideShow.style.display ="block";
+   gallerySlideShow.classList.add("open");
   }
+}
+
+function closeGallery(e)
+{
+  const gallerySlideShow = document.querySelector(".gallery-slide-show");
+  //gallerySlideShow.style.display = "none";
+  gallerySlideShow.classList.remove("open");
 }

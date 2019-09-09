@@ -213,7 +213,7 @@
 
        <div class="gallery-slide-show">
          
-        <input type="image" src="img/iconfinder_error-fill_3017946.png" id="close-icon">
+        <input type="image" src="img/iconfinder_error-fill_3017946.png" id="close-icon" class="close-gallery-container">
          
          <div class="carrousel-gallery-container">
          
@@ -384,7 +384,7 @@ const closebtn = document.querySelector("#close-icon");
 const formulario = document.querySelector("#form-appointment");
 const btnSubmit = document.querySelector("#submit");
 const galleryContainer = document.querySelector(".gallery-container");
-
+const closeGalleryContainer = document.querySelector(".close-gallery-container");
 
 
 menuBar.addEventListener("mouseover",hoverMenuItems);
@@ -395,6 +395,7 @@ btnAppointment.addEventListener("click",openAppointmentForm);
 closebtn.addEventListener("click",closeAppointmentForm);
 formulario.addEventListener("submit",submitAppointment);
 galleryContainer.addEventListener("click",openGallerySlideShow);
+closeGalleryContainer.addEventListener("click",closeGallery);
 
 
 
