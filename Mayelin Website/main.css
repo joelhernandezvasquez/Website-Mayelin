@@ -588,7 +588,7 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
     height:100%;
     background: rgba(0,0,0, .9);
     display:none;
-    z-index:2;
+    z-index:3;
     position:fixed;
     top:0;
     
@@ -609,11 +609,106 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
 
 .carrousel-gallery-container
 {
-    width:90%;
-    height:300px;
-    background:white;
-    margin:100px auto 0px auto;
+    position:relative;
+    width:95%;
+    height:450px;
+    /* background:white; */
+    margin:100px 5px 0px 5px;
+    display:grid;
+    grid-template-columns:0.2fr 2fr 0.2fr;
+    grid-template-rows:350px;
+    grid-template-areas:
+    "left-arrow-gallery track-container-gallery right-arrow-gallery"
+     "dots-image-container dots-image-container dots-image-container";
+     /* overflow: hidden; */
    
+}
+.left-arrow-gallery
+{
+    grid-area:left-arrow-gallery;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    /* border:1px solid blue; */
+}
+
+/* LEFT AND RIGHT ARROW ICONS */
+.left,
+.right      
+{
+  width:25px;
+  height:25px;
+  box-shadow: -2px 2px 0 rgba(255, 255, 255, 0.5);
+  transition:box-shadow 0.2s;
+  
+  
+  
+  
+}
+.left
+{
+    transform:rotate(45deg);
+    margin-left:10px;
+    
+}
+.right
+{
+    transform: rotate(230deg);
+    margin-right:10px;
+}
+.left:hover,
+.right:hover
+{
+    box-shadow: -2px 2px 0 rgba(255, 255, 255, 1);
+    
+}
+
+.track-container-gallery
+{
+    grid-area:track-container-gallery;
+    position:relative;
+    /* border:1px solid green; */
+   
+}
+.right-arrow-gallery
+{
+    grid-area:right-arrow-gallery;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    /* border:1px solid blue; */
+}
+
+.slide
+{
+    width:100%;
+    height:100%;
+     position:absolute; 
+}
+.slide img
+{
+    
+    min-width: 100%;
+    height:100%;
+    /* height:350px; */
+    
+}
+
+.dots-image-container
+{
+    grid-area:dots-image-container;
+    border:1px solid red;
+    display:none;
+    
+    
+}
+.dots-image-container > div
+{
+  background:white;
+  flex:1 1 auto;
+  height:100px;
+  border:1px solid blue;
 }
 
 /* TESTIMONY CONTAINER */
@@ -867,5 +962,28 @@ justify-content: space-around;
     {
         padding:20px 15px 10px 15px; 
     }
+
+}
+
+@media(min-width:767px)
+{
+   .carrousel-gallery-container
+{
+    width:95%;
+    height:450px;
+    /* background:white; */
+    margin:100px 5px 0px 5px;
+    display:grid;
+    grid-template-columns:0.2fr 2fr 0.2fr;
+    grid-template-rows:350px 100px;
+    grid-template-areas:
+    "left-arrow-gallery track-container-gallery right-arrow-gallery"
+    "dots-image-container dots-image-container dots-image-container";
+
+} 
+.dots-image-container
+{
+ display:flex;  
+}
 
 }

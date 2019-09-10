@@ -218,22 +218,49 @@
          <div class="carrousel-gallery-container">
          
           <div class="left-arrow-gallery">
-
+            <div class="left"> </div>
           </div>
 
           <div class="track-container-gallery">
 
             <div class="slide">
+              <img src="img/61959658_2401570853219567_3722258846169694208_n.jpg" class="responsive-images">
+            </div>
 
+            <div class="slide">
+              <img src="img/67306991_2493057797404205_7867638431319326720_n.jpg" class="responsive-images">
+            </div>
+
+            <div class="slide">
+              <img src="img/67327718_2502763066433678_7677955255140614144_n.jpg" class="responsive-images">
+            </div>
+
+            <div class="slide">
+              <img src="img/67439993_2503675533009098_8098456527926460416_n.jpg" class="responsive-images">
+            </div>
+
+            <div class="slide">
+              <img src="img/67620428_2507509262625725_1255349911906418688_n.jpg" class="responsive-images">
+            </div>
+
+            <div class="slide">
+              <img src="img/66290528_2467362809973704_5262175488469630976_n.jpg" class="responsive-images">
             </div>
           </div>
 
           <div class="right-arrow-gallery">
-
+           
+            <div class="right"></div>
           </div>
 
           <div class="dots-image-container">
-
+          
+            <div> </div>
+          <div> </div>
+          <div> </div>
+          <div > </div>
+          <div > </div>
+          <div > </div>
           </div>
 
          </div>
@@ -385,6 +412,15 @@ const formulario = document.querySelector("#form-appointment");
 const btnSubmit = document.querySelector("#submit");
 const galleryContainer = document.querySelector(".gallery-container");
 const closeGalleryContainer = document.querySelector(".close-gallery-container");
+
+
+const track = document.querySelector(".track-container-gallery");
+const slides = Array.from(document.querySelectorAll(".slide"));
+const slideWidth = slides[0].getBoundingClientRect().width;
+
+alert(slideWidth);
+
+
 
 
 menuBar.addEventListener("mouseover",hoverMenuItems);
