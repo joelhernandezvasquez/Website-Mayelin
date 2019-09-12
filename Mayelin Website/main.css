@@ -591,8 +591,6 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
     z-index:3;
     position:fixed;
     top:0;
-    
-
 }
 .open.gallery-slide-show
 {
@@ -620,7 +618,7 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
     grid-template-areas:
     "left-arrow-gallery track-container-gallery right-arrow-gallery"
      "dots-image-container dots-image-container dots-image-container";
-     /* overflow: hidden; */
+    
    
 }
 .left-arrow-gallery
@@ -668,6 +666,10 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
 {
     grid-area:track-container-gallery;
     position:relative;
+    transform: translateX(0);
+
+    transition: transform 0.4s ease-out;
+ 
     /* border:1px solid green; */
    
 }
