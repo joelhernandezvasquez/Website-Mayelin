@@ -96,73 +96,79 @@ function openGallerySlideShow(e)
 
   if(e.target.closest("img"))
   {
-   
+    gallerySlideShow.classList.add("open");
+    
     const ImageCardSelected = e.target.parentElement.parentElement.dataset.image;
-    const slidesArray = document.querySelectorAll(".slide");
-    const track = document.querySelector(".track-container-gallery");
+    const slidesArray = Array.from(document.querySelectorAll(".slide"));
     const slideWidth = slidesArray[0].getBoundingClientRect().width + 50;
+    const track = document.querySelector(".track-container-gallery");
 
 
     if(ImageCardSelected==="1")
     {
       const currentSlide = slidesArray[0];
       currentSlide.classList.add(".slide-selected");
-      const position = slideWidth * 0 + "px";
+      const position = slideWidth * 0;
+      console.log(currentSlide);
+      alert(position);
 
-      console.log(currentSlide);
-      console.log(position);
-    }
-    else if(ImageCardSelected==="2")
-    {
-      const currentSlide = slidesArray[1];
-      currentSlide.classList.add(".slide-selected");
-      const position = slideWidth * 1 + "px";
 
-      console.log(currentSlide);
-      console.log(position);
     }
-    else if(ImageCardSelected==="3")
-    {
-      const currentSlide = slidesArray[2];
-      currentSlide.classList.add(".slide-selected");
-      const position = slideWidth * 2 + "px";
+   else if(ImageCardSelected==="2")
+   {
+     const currentSlide = slidesArray[1];
+       currentSlide.classList.add(".slide-selected");
+       const position = slideWidth * 1 + "px";
+       console.log(currentSlide);
+       alert(position);
+       track.style.transform = `translateX(-${position})`
+
+
       
-      console.log(currentSlide);
-      console.log(position);
-    }
-    else if(ImageCardSelected==="4")
-    {
-      const currentSlide = slidesArray[3];
-      currentSlide.classList.add(".slide-selected");
-      const position = slideWidth * 3 + "px";
+     
+     }
+    // else if(ImageCardSelected==="3")
+    // {
+    //   const currentSlide = slidesArray[2];
+    //   currentSlide.classList.add(".slide-selected");
+    //   const position = slideWidth * 2;
       
-      console.log(currentSlide);
-      console.log(position);
-    }
-    else if(ImageCardSelected==="5")
-    {
-      const currentSlide = slidesArray[4];
-      currentSlide.classList.add(".slide-selected");
-      const position = slideWidth * 4 + "px";
+    //   console.log(currentSlide);
+    //   console.log(position);
+    // }
+    // else if(ImageCardSelected==="4")
+    // {
+    //   const currentSlide = slidesArray[3];
+    //   currentSlide.classList.add(".slide-selected");
+    //   const position = slideWidth * 3;
       
-      console.log(currentSlide);
-      console.log(position);
-    }
-    else if(ImageCardSelected==="6")
-    {
-      const currentSlide = slidesArray[5];
-      currentSlide.classList.add(".slide-selected");
-      const position = slideWidth * 5 + "px";
+    //   console.log(currentSlide);
+    //   console.log(position);
+    // }
+    // else if(ImageCardSelected==="5")
+    // {
+    //   const currentSlide = slidesArray[4];
+    //   currentSlide.classList.add(".slide-selected");
+    //   const position = slideWidth * 4;
       
-      console.log(currentSlide);
-      console.log(position);
-    }
+    //   console.log(currentSlide);
+    //   console.log(position);
+    // }
+    // else if(ImageCardSelected==="6")
+    // {
+    //   const currentSlide = slidesArray[5];
+    //   currentSlide.classList.add(".slide-selected");
+    //   const position = slideWidth * 5;
+      
+    //   console.log(currentSlide);
+    //   console.log(position);
+    // }
     
   
 
   
    
-   gallerySlideShow.classList.add("open");
+   
 
    runSlideShow();
   }
@@ -191,9 +197,11 @@ function runSlideShow()
   const slides = Array.from(document.querySelectorAll(".slide"));
   const slideWidth = slides[0].getBoundingClientRect().width + 50;
   
+  
   slides.forEach((slide,index)=>
   {
     slide.style.left = slideWidth * index + "px";
+  
   }
   );
 
