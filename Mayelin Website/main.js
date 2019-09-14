@@ -1,13 +1,10 @@
 
-
-
 function hoverMenuItems(e)
 {
   if(e.target.closest("li"))
   {
     link= e.target.firstElementChild;
     link.style.color = "white";
-   
   }
 }
 
@@ -17,7 +14,6 @@ function hoverOutMenuItems(e)
  {
    link= e.target.firstElementChild;
    link.style.color = "#e75aa1";
-  
  }
 }
 
@@ -26,7 +22,6 @@ function hoverLinks(e)
   if(e.target.closest("a"))
  {
    e.target.style.color = "white";
-  
  }
 }
 
@@ -40,7 +35,6 @@ function openAppointmentForm(e)
 {
  const appointmentForm = document.querySelector(".appointment-container");
  appointmentForm.classList.add("openAppointmentForm");
-
 }
 
 function closeAppointmentForm()
@@ -52,12 +46,10 @@ function closeAppointmentForm()
   fullName.value="";
   email.value ="";
   appointmentForm.classList.remove("openAppointmentForm");
-
 }
 
 function submitAppointment(e)
 {
-
  const fullName = document.querySelector("#name");
  const email = document.querySelector("#email");
  const nameErrorMessage = document.querySelector("#nameError");
@@ -97,106 +89,84 @@ function openGallerySlideShow(e)
   if(e.target.closest("img"))
   {
     gallerySlideShow.classList.add("open");
-    
-    const ImageCardSelected = e.target.parentElement.parentElement.dataset.image;
+    selectGalleryImage(e);
+    runSlideShow();
+  }
+}
+
+function selectGalleryImage(e)
+{
+  const ImageCardSelected = e.target.parentElement.parentElement.dataset.image;
     const slidesArray = Array.from(document.querySelectorAll(".slide"));
     const slideWidth = slidesArray[0].getBoundingClientRect().width + 50;
     const track = document.querySelector(".track-container-gallery");
 
-
-    if(ImageCardSelected==="1")
+   if(ImageCardSelected==="1")
     {
       const currentSlide = slidesArray[0];
-      currentSlide.classList.add(".slide-selected");
+      currentSlide.classList.add("slide-selected");
       const position = slideWidth * 0;
-      console.log(currentSlide);
-      alert(position);
-
-
+      const previousButton = document.querySelector(".left");
+      previousButton.style.display = "none";
     }
    else if(ImageCardSelected==="2")
    {
-     const currentSlide = slidesArray[1];
-       currentSlide.classList.add(".slide-selected");
-       const position = slideWidth * 1 + "px";
+       const currentSlide = slidesArray[1];
+       currentSlide.classList.add("slide-selected");
        console.log(currentSlide);
-       alert(position);
+       
+       const position = slideWidth * 1 + "px";
        track.style.transform = `translateX(-${position})`
 
-
-      
-     
      }
-    // else if(ImageCardSelected==="3")
-    // {
-    //   const currentSlide = slidesArray[2];
-    //   currentSlide.classList.add(".slide-selected");
-    //   const position = slideWidth * 2;
-      
-    //   console.log(currentSlide);
-    //   console.log(position);
-    // }
-    // else if(ImageCardSelected==="4")
-    // {
-    //   const currentSlide = slidesArray[3];
-    //   currentSlide.classList.add(".slide-selected");
-    //   const position = slideWidth * 3;
-      
-    //   console.log(currentSlide);
-    //   console.log(position);
-    // }
-    // else if(ImageCardSelected==="5")
-    // {
-    //   const currentSlide = slidesArray[4];
-    //   currentSlide.classList.add(".slide-selected");
-    //   const position = slideWidth * 4;
-      
-    //   console.log(currentSlide);
-    //   console.log(position);
-    // }
-    // else if(ImageCardSelected==="6")
-    // {
-    //   const currentSlide = slidesArray[5];
-    //   currentSlide.classList.add(".slide-selected");
-    //   const position = slideWidth * 5;
-      
-    //   console.log(currentSlide);
-    //   console.log(position);
-    // }
-    
-  
-
-  
-   
-   
-
-   runSlideShow();
-  }
+    else if(ImageCardSelected==="3")
+    {
+      const currentSlide = slidesArray[2];
+      currentSlide.classList.add("slide-selected");
+      const position = slideWidth * 2 + "px";
+      track.style.transform = `translateX(-${position})`
+    }
+    else if(ImageCardSelected==="4")
+    {
+      const currentSlide = slidesArray[3];
+      currentSlide.classList.add("slide-selected");
+      const position = slideWidth * 3 + "px";
+       track.style.transform = `translateX(-${position})`
+    }
+    else if(ImageCardSelected==="5")
+    {
+      const currentSlide = slidesArray[4];
+      currentSlide.classList.add("slide-selected");
+      const position = slideWidth * 4 + "px";
+       track.style.transform = `translateX(-${position})`
+    }
+    else if(ImageCardSelected==="6")
+    {
+      const currentSlide = slidesArray[5];
+      currentSlide.classList.add("slide-selected");
+      const position = slideWidth * 5 + "px";
+       track.style.transform = `translateX(-${position})`
+       const nextButton = document.querySelector(".right");
+       nextButton.style.display = "none";
+    }
+ 
 }
 
 function closeGallery(e)
 {
   const gallerySlideShow = document.querySelector(".gallery-slide-show");
-  
-  //reseting the carrousel to the first slide when the gallery close
   const track = document.querySelector(".track-container-gallery");
   const originalPosition = 0;
   const firstSlide = track.firstElementChild;
  
-
   track.style.transform = `translateX(-${originalPosition})`
-
- 
-
   gallerySlideShow.classList.remove("open");
- 
 }
 
 function runSlideShow()
 {
   const slides = Array.from(document.querySelectorAll(".slide"));
   const slideWidth = slides[0].getBoundingClientRect().width + 50;
-  
   
   slides.forEach((slide,index)=>
   {
@@ -207,22 +177,15 @@ function runSlideShow()
 
   const nextButton = document.querySelector(".right");
   const previousButton = document.querySelector(".left");
-  
-  previousButton.style.display = "none";
 
   nextButton.addEventListener("click",moveNextSlide);
   previousButton.addEventListener("click",movePreviousSlide);
-
- 
 }
 
 function moveNextSlide()
 {
-  
-
   const track = document.querySelector(".track-container-gallery");
   const currentSlide = document.querySelector(".slide-selected");
- 
   const nextSlide = currentSlide.nextElementSibling;
   const amountToMove = nextSlide.style.left;
 

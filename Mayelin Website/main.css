@@ -527,7 +527,7 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
 .gallery-container
 {
  grid-area:gallery-container;
- border:1px solid pink;
+ /* border:1px solid pink; */
  display:grid;
  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
  grid-gap:10px;
@@ -592,6 +592,7 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
     position:fixed;
     top:0;
 }
+.slide-selected{}
 .open.gallery-slide-show
 {
     display:block;
@@ -638,10 +639,7 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
   width:25px;
   height:25px;
   box-shadow: -2px 2px 0 rgba(255, 255, 255, 0.5);
-  transition:box-shadow 0.2s;
-  
-  
-  
+  transition:box-shadow 0.2s; 
   
 }
 .left
@@ -667,10 +665,8 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
     grid-area:track-container-gallery;
     position:relative;
     transform: translateX(0);
-
     transition: transform 0.4s ease-out;
- 
-    /* border:1px solid green; */
+   /* border:1px solid green; */
    
 }
 .right-arrow-gallery
@@ -723,6 +719,7 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
     grid-template-areas:  
     "heading-testimony"
     "carrousel";
+    margin-top:20px;
 }
 
 .heading-testimony
