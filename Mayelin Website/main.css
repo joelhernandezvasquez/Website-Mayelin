@@ -753,6 +753,7 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
     margin-left:auto;
     margin-right:auto;
     border-radius:5px;
+    position: relative;
     /* border:2px solid var(--primary-background-color); */
 }
 .left-arrow
@@ -781,9 +782,19 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
 {
     grid-area:slide-container;
     margin-top:10px;
-    /* border:1px solid black; */
+    position:relative;
+     border:1px solid black; 
+     display: flex;
+     flex-direction: column;
+     align-items: center;
 
 }
+.testimony-slide
+{
+  position: absolute;
+ 
+}
+
 .slide-container iframe
 {
     width:100%;
@@ -818,6 +829,20 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
     border-radius: 100%;
 }
 
+.image-profile
+{
+    width:100px;
+    height:100px;
+    background:black;
+    border-radius: 50%;
+   
+}
+.testimony-content
+{
+    width:90%;
+    height:100px;
+    background:blue;
+}
 
 /* CONTACT CONTAINER */
 .contact-container
