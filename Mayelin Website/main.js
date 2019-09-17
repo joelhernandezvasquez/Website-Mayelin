@@ -260,15 +260,23 @@ function moveNextTestimonySlide()
   const currentSlide = document.querySelector(".current-slide");
   const nextSlide = currentSlide.nextElementSibling;
   const amountToMove = nextSlide.style.left;
+ 
+   track.style.transform = `translateX(-${amountToMove})`;
 
-
-  track.style.transform = `translateX(-${amountToMove})`;
-
-
+   nextSlide.classList.add("current-slide");
+   currentSlide.classList.remove("current-slide");
 
 }
 
 function movePreviousTestimonySlide()
 {
+  const track = document.querySelector(".slide-container");
+  const currentSlide = document.querySelector(".current-slide");
+  const previousSlide = currentSlide.previousElementSibling;
+  const amountToMove = previousSlide.style.left;
+ 
+   track.style.transform = `translateX(-${amountToMove})`;
 
+   previousSlide.classList.add("current-slide");
+   currentSlide.classList.remove("current-slide");
 }
