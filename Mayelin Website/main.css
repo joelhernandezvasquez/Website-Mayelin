@@ -111,7 +111,7 @@
     height:100vh;
     display:grid;
     grid-template-columns:1fr;
-    grid-template-rows: 450px auto 1600px  2200px 2200px  650px 580px 500px 340px;
+    grid-template-rows: 450px auto 1600px  2200px 2200px  750px 580px 500px 340px;
     row-gap:20px;
    grid-template-areas: 
     "header"
@@ -742,18 +742,18 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
 {
     grid-area:carrousel;
     width:97%;
-    height:400px;
+    height:500px;
     display:grid;
     grid-template-columns: 0.2fr 1.5fr 0.2fr ;
-    grid-template-rows: 360px 40px;
+    grid-template-rows: 440px 40px;
     grid-template-areas: 
     "left-arrow slide-container right-arrow"
     "dots-container dots-container dots-container";
-    background:rgba(229, 230, 232, 0.76);
+    background:var(--primary-background-color);
     margin-left:auto;
     margin-right:auto;
     border-radius:5px;
-    position: relative;
+ 
     /* border:2px solid var(--primary-background-color); */
 }
 .left-arrow
@@ -770,7 +770,7 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
 {
    
     border-radius: 50%;
-    width:30px;
+    width:35px;
     
 }
 .arrow:hover
@@ -783,15 +783,20 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
     grid-area:slide-container;
     margin-top:10px;
     position:relative;
-     border:1px solid black; 
-     display: flex;
-     flex-direction: column;
-     align-items: center;
+     /* border:1px solid black;  */
+     /* overflow: hidden; */
+    
 
 }
 .testimony-slide
 {
   position: absolute;
+  width:100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
  
 }
 
@@ -809,6 +814,7 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-right:5px;
 }
 .dots-container
 {
@@ -831,17 +837,42 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
 
 .image-profile
 {
-    width:100px;
-    height:100px;
-    background:black;
+    width:120px;
+    height:120px;
     border-radius: 50%;
-   
+    margin-top:10px;  
+}
+.image-profile img
+{
+    border-radius: 50%;
 }
 .testimony-content
 {
-    width:90%;
-    height:100px;
-    background:blue;
+    width:95%;
+    height:235px;
+    /* border:1px solid blue; */
+    margin-top:10px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.testimony-content p 
+{
+    font-family: var(--secondary-font);
+    font-size: 16px;
+    color:var(--primary-color);
+    margin-left:10px;
+
+}
+.testimony-slide a
+{
+    font-family: var(--secondary-font);
+    color:var(--primary-color);
+    font-size: 16px;
+    margin-top:10px;
+   
+
 }
 
 /* CONTACT CONTAINER */

@@ -232,3 +232,43 @@ function movePreviousSlide()
    nextButton.style.display = "block";
  }
 } 
+
+function loadTestimonyCarrousel()
+{
+  const slides = Array.from(document.querySelectorAll(".testimony-slide"));
+  const slideWidth = slides[0].getBoundingClientRect().width + 50;
+  
+  slides.forEach((slide,index)=>
+  {
+    slide.style.left = slideWidth * index + "px";
+  
+  }
+  ); 
+
+  const nextButton = document.querySelector(".right-arrow");
+  const previousButton = document.querySelector(".left-arrow");
+
+  nextButton.addEventListener("click",moveNextTestimonySlide);
+  previousButton.addEventListener("click",movePreviousTestimonySlide);
+
+
+}
+
+function moveNextTestimonySlide()
+{
+  const track = document.querySelector(".slide-container");
+  const currentSlide = document.querySelector(".current-slide");
+  const nextSlide = currentSlide.nextElementSibling;
+  const amountToMove = nextSlide.style.left;
+
+
+  track.style.transform = `translateX(-${amountToMove})`;
+
+
+
+}
+
+function movePreviousTestimonySlide()
+{
+
+}

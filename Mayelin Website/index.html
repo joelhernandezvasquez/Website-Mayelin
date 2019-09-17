@@ -322,26 +322,53 @@
            <div class="carrousel">
 
             <div class="left-arrow">
-            <input type="image" src="img/iconfinder_arrow-left_227602.svg" class="arrow">
+            <input type="image" src="img/iconfinder_icon-ios7-arrow-left_211689.png" class="arrow">
             </div>
 
             <div class="slide-container">
 
-               <div class="testimony-slide">
+               <div class="testimony-slide current-slide">
                  
-                  <div class="image-profile"> </div>
-                  <div class="testimony-content"> Hello</div>
-                  <h2></h2>
-                  <a href="#"></a>
+                  <div class="image-profile"> <img src="img/profile1.jpg" class="responsive-images"> </div>
+                  <div class="testimony-content"> 
+                    <p> Cannot emphasize the beautiful world this team does. my experience was amazing, they care about 
+                    professionalism and the work they do is spectacular. It has been a week and my nails and stones still look the same.</p>
+                  </div>
 
+                  <a href="https://www.facebook.com/pg/MayelinNailsAndBar/reviews/?ref=page_internal"> Robert N Yadira McCoy </a> 
+                
               </div>
-              
+
+              <div class="testimony-slide">
+                 
+                   <div class="image-profile"> <img src="img/profile2.jpg" class="responsive-images"> </div>
+                  <div class="testimony-content"> 
+                    <p> Un lugar excelente, se hacen cita, son puntuales y el local es muy bonita. Las chicas se ven bien con uniforme y todos 
+                      son amigables y trabajan bien. Puse esmalte de gel y hay muchos colores para eligir. Tuve muy buena experiencia, un salón de
+                       uñas muy distinto a los demás y volveré pronto. Muchas gracias Mayelin!</p>
+                  </div>
+
+                  <a href="https://www.facebook.com/pg/MayelinNailsAndBar/reviews/?ref=page_internal"> Cat Makey Delaney </a>
+                
+              </div>
+
+              <div class="testimony-slide">
+                 
+                  <div class="image-profile"> <img src="img/profile3.jpg" class="responsive-images"> </div>
+                  <div class="testimony-content"> 
+                    <p>Es el mejor lugar para el cuidado de tus manos y pie y donde podras disfrutar unos tragos,mientras te ponen bella. 
+                      Un estilo diferente para una mujer diferente.</p>
+                  </div>
+
+                  <a href="https://www.facebook.com/pg/MayelinNailsAndBar/reviews/?ref=page_internal"> Ivelisse Mejia Nuñez </a>
+                
+              </div>
               
             
             </div>
 
             <div class="right-arrow">
-              <input type="image" src="img/iconfinder_arrow-right_227601.svg" class="arrow">
+              <input type="image" src="img/iconfinder_icon-ios7-arrow-right_211607.png" class="arrow">
             </div>
 
             <div class="dots-container">
@@ -424,6 +451,7 @@ const galleryContainer = document.querySelector(".gallery-container");
 const closeGalleryContainer = document.querySelector(".close-gallery-container");
 
 
+window.onload(loadTestimonyCarrousel());
 menuBar.addEventListener("mouseover",hoverMenuItems);
 menuBar.addEventListener("mouseout",hoverOutMenuItems);
 menuBar.addEventListener("mouseover",hoverLinks);
