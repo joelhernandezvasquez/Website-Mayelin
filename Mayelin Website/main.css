@@ -101,7 +101,7 @@
 {
     color:var(--primary-background-color);
     font-family: var(--primary-font);
-    font-size: 16px;
+    font-size: 18px;
 }
 
 /* MOBILE LAYOUT */
@@ -215,14 +215,14 @@
 
 .appointment-container
 {
-    width:85%;
+    width:90%;
     height:auto;
     border-radius: 10px;
     background:white;
     position:absolute;
     z-index:2;
     margin-top:70px;
-    transform:translateX(405px);
+    transform:translateX(410px);
     transition:transform 0.5s;
 }
 
@@ -230,13 +230,15 @@
 {
     display: flex;
     flex-direction: column;
-    margin:55px auto 0px auto;
+    margin:60px auto 0px auto;
+    
+  
     
 }
 
 #close-icon
 {
- width:50px;
+ width:30px;
  float:right;
  margin:5px 10px 0px 0px;
 }
@@ -265,7 +267,7 @@ input[type="email"],
 textarea,
 select
 {
-    width:85%;
+    width:80%;
     padding:10px;
     margin:10px 0px 10px 20px;
     margin-bottom:10px;
@@ -303,7 +305,7 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
 
 .openAppointmentForm.appointment-container
 {
-    transform: translateX(20px);
+    transform: translateX(10px);
 }
 
 
@@ -592,7 +594,7 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
     position:fixed;
     top:0;
 }
-.slide-selected{}
+
 .open.gallery-slide-show
 {
     display:block;
@@ -783,6 +785,8 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
     grid-area:slide-container;
     margin-top:10px;
     position:relative;
+    transform: translateX(0);
+    transition: transform 0.4s ease-out;
      /* border:1px solid black;  */
       
     
@@ -833,6 +837,12 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
     margin:10px;
     background: white;
     border-radius: 100%;
+    border:none;
+    cursor: pointer;
+}
+.dot-selected
+{
+    background:black;
 }
 
 .image-profile
@@ -983,7 +993,6 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
 .social-media-container
 {
 height:50px;
-
 display:flex;
 width:100%;
 align-items:center;
@@ -992,16 +1001,17 @@ justify-content: space-around;
 }
 .media-icon
 {
- width:50px;
- height:50px;
+ width:60px;
+ height:60px;
 }
 .footer p
 {
    color:white;
    text-align: center;
-   font-size: 16px;
+   font-size: 18px;
    font-family: var(--secondary-font);
    margin-top:30px;
+   padding:10px;
 }
 
 @media(min-width:359px)
@@ -1022,7 +1032,16 @@ justify-content: space-around;
 
 @media(min-width:767px)
 {
-   .carrousel-gallery-container
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    .carrousel-gallery-container
 {
     width:95%;
     height:450px;

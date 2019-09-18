@@ -327,7 +327,7 @@
 
             <div class="slide-container">
 
-               <div class="testimony-slide current-slide">
+               <div class="testimony-slide current-slide" id="first-testimony-slide">
                  
                   <div class="image-profile"> <img src="img/profile1.jpg" class="responsive-images"> </div>
                   <div class="testimony-content"> 
@@ -339,7 +339,7 @@
                 
               </div>
 
-              <div class="testimony-slide">
+              <div class="testimony-slide" id="second-testimony-slide">
                  
                    <div class="image-profile"> <img src="img/profile2.jpg" class="responsive-images"> </div>
                   <div class="testimony-content"> 
@@ -352,7 +352,7 @@
                 
               </div>
 
-              <div class="testimony-slide">
+              <div class="testimony-slide" id="third-testimony-slide">
                  
                   <div class="image-profile"> <img src="img/profile3.jpg" class="responsive-images"> </div>
                   <div class="testimony-content"> 
@@ -372,9 +372,9 @@
             </div>
 
             <div class="dots-container">
-               <div class="dot"></div>
-               <div class="dot"></div>
-               <div class="dot"></div>
+               <button class="dot dot-selected" data-dot="first"> </button>
+               <button class="dot" data-dot="second">  </button>
+               <button class="dot" data-dot="third">  </button>
             </div>
 
            
@@ -395,7 +395,7 @@
        
            <div class="info-contact">
               <img src="img/5d39adc2872e33b8cab6dfd4_iconfinder_simpline_18_2305591.png" id="address-icon">
-              <p class="paragraph">Direccion: Calle Regino Camilo #7 , Tenares  Republica Dominicana</p>
+              <p class="paragraph">Direccion: Calle Regino Camilo #7 Tenares  Republica Dominicana</p>
           </div> 
          
        </div>
@@ -449,6 +449,7 @@ const formulario = document.querySelector("#form-appointment");
 const btnSubmit = document.querySelector("#submit");
 const galleryContainer = document.querySelector(".gallery-container");
 const closeGalleryContainer = document.querySelector(".close-gallery-container");
+const dotsButton = document.querySelector(".dots-container");
 
 
 window.onload = loadTestimonyCarrousel();
@@ -461,6 +462,7 @@ closebtn.addEventListener("click",closeAppointmentForm);
 formulario.addEventListener("submit",submitAppointment);
 galleryContainer.addEventListener("click",openGallerySlideShow);
 closeGalleryContainer.addEventListener("click",closeGallery);
+dotsButton.addEventListener("click",targetDot);
 
 
 

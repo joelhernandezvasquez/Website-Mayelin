@@ -236,7 +236,7 @@ function movePreviousSlide()
 function loadTestimonyCarrousel()
 {
   const slides = Array.from(document.querySelectorAll(".testimony-slide"));
-  const slideWidth = slides[0].getBoundingClientRect().width + 50;
+  const slideWidth = slides[0].getBoundingClientRect().width + 60;
   
   slides.forEach((slide,index)=>
   {
@@ -266,6 +266,8 @@ function moveNextTestimonySlide()
    nextSlide.classList.add("current-slide");
    currentSlide.classList.remove("current-slide");
 
+   updateDots("move-forward");
+
 }
 
 function movePreviousTestimonySlide()
@@ -279,4 +281,76 @@ function movePreviousTestimonySlide()
 
    previousSlide.classList.add("current-slide");
    currentSlide.classList.remove("current-slide");
+
+   updateDots("move-back");
+}
+
+function targetDot(e)
+{
+  const track = document.querySelector(".slide-container");
+  const currentSlide = document.querySelector(".current-slide");
+
+  if(e.target.dataset.dot==="first")
+  {
+    const nextSlide = document.querySelector("#first-testimony-slide");
+    const amountToMove = nextSlide.style.left;
+    track.style.transform = `translateX(-${amountToMove})`;
+
+    currentSlide.classList.remove("current-slide");
+    nextSlide.classList.add("current-slide");
+
+    const currentDot = document.querySelector(".dot-selected");
+    currentDot.classList.remove("dot-selected");
+    e.target.classList.add("dot-selected");
+  }
+
+  else if(e.target.dataset.dot==="second")
+  {
+    const nextSlide = document.querySelector("#second-testimony-slide");
+    const amountToMove = nextSlide.style.left;
+    track.style.transform = `translateX(-${amountToMove})`;
+
+    currentSlide.classList.remove("current-slide");
+    nextSlide.classList.add("current-slide");
+
+    const currentDot = document.querySelector(".dot-selected");
+    currentDot.classList.remove("dot-selected");
+    e.target.classList.add("dot-selected");
+  }
+
+  else if(e.target.dataset.dot==="third")
+  {
+    const nextSlide = document.querySelector("#third-testimony-slide");
+    const amountToMove = nextSlide.style.left;
+    track.style.transform = `translateX(-${amountToMove})`;
+
+    currentSlide.classList.remove("current-slide");
+    nextSlide.classList.add("current-slide");
+
+    const currentDot = document.querySelector(".dot-selected");
+    currentDot.classList.remove("dot-selected");
+    e.target.classList.add("dot-selected");
+  }
+
+}
+
+function updateDots(action)
+{
+  const currentDot = document.querySelector(".dot-selected");
+
+  if(action==="move-forward")
+  {
+    const nextDot = currentDot.nextElementSibling;
+    currentDot.classList.remove("dot-selected");
+    nextDot.classList.add("dot-selected");
+    return;
+  }
+
+  if(action==="move-back")
+  {
+    const previousDot = currentDot.previousElementSibling;
+    currentDot.classList.remove("dot-selected");
+    previousDot.classList.add("dot-selected");
+    return;
+  }
 }
