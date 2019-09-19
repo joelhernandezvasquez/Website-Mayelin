@@ -1030,16 +1030,80 @@ justify-content: space-around;
 
 }
 
+/* TABLET MODE */
 @media(min-width:767px)
 {
    
+  .wrapper
+{
+    grid-template-rows: 750px auto 1600px  2200px 2200px  750px 580px 500px 340px;
+    row-gap:20px;
+   grid-template-areas: 
+    "header"
+    "about-us"
+    "services-container"
+    "products-container"
+    "gallery-container"
+    "testimony-container"
+    "contact-container"
+    "horario-container"
+    "footer";
+}
+.header
+{
+ background-position-y:30%;
+}
+
+.header h2
+{
+    font-size:2.5rem;
    
-   
-   
-   
-   
-   
-   
+}
+.header h1
+{
+    font-size:3rem;
+}
+
+.btn
+{
+    padding:30px;
+    width:250px;
+    height:70px;
+    font-size: 2rem;
+    border-radius: 10px;
+    
+}
+.welcome-message-container
+{
+     margin-top:130px;
+}
+.appointment-container
+{
+width:80%;
+height:auto;
+margin-top:10px;
+transform:translateX(910px);
+}
+
+.openAppointmentForm.appointment-container
+{
+    transform: translateX(60px);
+}
+#logo-brand
+{
+    width:70px;
+    height:70px;
+}
+.menu-bar
+{
+    width:350px;
+    height:500px;
+    transform:translateX(-370px);
+}
+.menu-bar li
+{
+    font-size: 1.5rem; 
+}
    
     .carrousel-gallery-container
 {
