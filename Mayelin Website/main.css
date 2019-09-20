@@ -230,10 +230,7 @@
 {
     display: flex;
     flex-direction: column;
-    margin:60px auto 0px auto;
-    
-  
-    
+    margin:60px auto 0px auto;  
 }
 
 #close-icon
@@ -328,12 +325,12 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
 .title
 {
     grid-area:title;
-    /* border:1px solid red; */
+     /* border:1px solid red;  */
 }
 .about-us-picture
 {
     grid-area:about-us-picture;
-    /* border:1px solid blue; */
+     /* border:1px solid blue; */
 }
 .about-us-picture img
 {
@@ -345,7 +342,7 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* border:1px solid black; */
+     /* border:1px solid black;  */
 }
 
 .about-us-profile p
@@ -472,15 +469,25 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
     grid-area:products-container;
     background:rgba(229, 230, 232, 0.76);
     display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    grid-gap:15px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "heading-products"
+    "products";
     /* border:1px solid red; */
 
 }
 .heading-products
 {
+    grid-area: heading-products;
     background:white;
     height:100px;
+}
+
+.products
+{
+    grid-area:products;
+    display:grid;
+   grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
 }
 
 .products-card
@@ -495,6 +502,7 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
     flex-direction: column;
     align-items: center;
     transition:transform 0.3s ease-in-out;
+    margin-bottom: 20px;
 
 }
 .products-card:hover
@@ -529,10 +537,24 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
 .gallery-container
 {
  grid-area:gallery-container;
- /* border:1px solid pink; */
+ border:1px solid pink;
  display:grid;
- grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
- grid-gap:10px;
+ grid-template-columns: 1fr;
+grid-template-areas:
+"heading-gallery"
+"image-container";
+}
+
+.heading-gallery
+{
+    grid-area:heading-gallery;
+}
+
+.image-container
+{
+    grid-area:image-container;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    background:silver;
 }
 
 .image-cards
@@ -542,8 +564,6 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
    margin-left:auto;
    margin-right:auto;
    position:relative;
-   
-   
 }
 .image-cards img
 {
@@ -1030,13 +1050,13 @@ justify-content: space-around;
 
 }
 
-/* TABLET MODE */
+/* TABLET LAYOUT */
 @media(min-width:767px)
 {
    
   .wrapper
 {
-    grid-template-rows: 750px auto 1600px  2200px 2200px  750px 580px 500px 340px;
+    grid-template-rows: 750px auto 1200px  1400px 2200px  750px 580px 500px 340px;
     row-gap:20px;
    grid-template-areas: 
     "header"
@@ -1105,7 +1125,86 @@ transform:translateX(910px);
     font-size: 1.5rem; 
 }
    
-    .carrousel-gallery-container
+   
+.dots-image-container
+{
+ display:flex;  
+}
+.about-us
+{
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:100px 600px;
+    grid-template-areas: 
+    "title title"
+    "about-us-picture about-us-profile";
+    /* border:1px solid green; */
+    
+}
+.about-us-picture
+{
+   margin-left:10px;
+}
+
+.about-us-profile p
+{
+font-size: 1.1rem;
+line-height: 1.8; 
+padding:0px 5px 10px 15px;  
+margin-top:0px;
+}
+.about-us button
+{
+    padding:20px;
+    width:200px;
+    height:50px;
+    font-size: 1.5rem;
+    align-self: flex-start;
+    margin-left:10px;
+}
+
+.services-container
+{
+    margin-top:0px;
+    /* border:1px solid black; */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:100px repeat(2,450px);
+    grid-gap:15px;
+    grid-template-areas:
+    "heading-service heading-service" 
+    "manicure-container pedicure-container"
+    "drinks-container .";  
+}
+.drinks-container
+{
+    margin-top:40px;
+}
+
+.services-container button
+{
+    padding:20px;
+    width:200px;
+    height:50px;
+    font-size: 1.7rem;  
+}
+.service-card
+{
+    width:90%;
+    height:460px;
+}
+
+
+.products-container button
+{
+    padding:20px;
+    width:220px;
+    height:50px;
+    font-size: 1.7rem;  
+    margin-top:20px; 
+}
+
+
+
+.carrousel-gallery-container
 {
     width:95%;
     height:450px;
@@ -1119,9 +1218,4 @@ transform:translateX(910px);
     "dots-image-container dots-image-container dots-image-container";
 
 } 
-.dots-image-container
-{
- display:flex;  
-}
-
 }
