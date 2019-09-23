@@ -98,7 +98,7 @@ function selectGalleryImage(e)
 {
   const ImageCardSelected = e.target.parentElement.parentElement.dataset.image;
     const slidesArray = Array.from(document.querySelectorAll(".slide"));
-    const slideWidth = slidesArray[0].getBoundingClientRect().width + 50;
+    const slideWidth = slidesArray[0].getBoundingClientRect().width + 200;
     const track = document.querySelector(".track-container-gallery");
 
    if(ImageCardSelected==="1")
@@ -106,16 +106,20 @@ function selectGalleryImage(e)
       const currentSlide = slidesArray[0];
       currentSlide.classList.add("slide-selected");
       const position = slideWidth * 0;
+      const galleryDotImage = document.querySelector("#first-gallery-image");
+      galleryDotImage.classList.add("highlight");
       const previousButton = document.querySelector(".left");
       previousButton.style.display = "none";
+      
+      alert(galleryDotImage);
     }
    else if(ImageCardSelected==="2")
    {
        const currentSlide = slidesArray[1];
        currentSlide.classList.add("slide-selected");
-       console.log(currentSlide);
-       
        const position = slideWidth * 1 + "px";
+       const galleryDotImage = document.querySelector("#second-gallery-image");
+       galleryDotImage.classList.add("highlight-image");
        track.style.transform = `translateX(-${position})`
 
      }
@@ -166,7 +170,7 @@ function closeGallery(e)
 function runSlideShow()
 {
   const slides = Array.from(document.querySelectorAll(".slide"));
-  const slideWidth = slides[0].getBoundingClientRect().width + 50;
+  const slideWidth = slides[0].getBoundingClientRect().width + 200;
   
   slides.forEach((slide,index)=>
   {

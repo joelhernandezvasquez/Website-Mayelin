@@ -537,12 +537,13 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
 .gallery-container
 {
  grid-area:gallery-container;
- border:1px solid pink;
+ /* border:1px solid pink; */
  display:grid;
  grid-template-columns: 1fr;
 grid-template-areas:
 "heading-gallery"
 "image-container";
+
 }
 
 .heading-gallery
@@ -553,8 +554,9 @@ grid-template-areas:
 .image-container
 {
     grid-area:image-container;
+    display:grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    background:silver;
+    grid-gap:10px;
 }
 
 .image-cards
@@ -633,7 +635,6 @@ grid-template-areas:
     position:relative;
     width:95%;
     height:450px;
-    /* background:white; */
     margin:100px 5px 0px 5px;
     display:grid;
     grid-template-columns:0.2fr 2fr 0.2fr;
@@ -718,17 +719,18 @@ grid-template-areas:
 .dots-image-container
 {
     grid-area:dots-image-container;
-    border:1px solid red;
-    display:none;
-    
+    /* border:1px solid red; */
+    display:none;  
     
 }
 .dots-image-container > div
 {
-  background:white;
+ 
   flex:1 1 auto;
   height:100px;
-  border:1px solid blue;
+  margin-left:5px;
+  padding-top:10px;
+  /* border:1px solid blue; */
 }
 
 /* TESTIMONY CONTAINER */
@@ -1056,7 +1058,7 @@ justify-content: space-around;
    
   .wrapper
 {
-    grid-template-rows: 750px auto 1200px  1400px 2200px  750px 580px 500px 340px;
+    grid-template-rows: 750px auto 1200px  1400px 1200px  750px 580px 500px 340px;
     row-gap:20px;
    grid-template-areas: 
     "header"
@@ -1203,19 +1205,28 @@ margin-top:0px;
 }
 
 
-
 .carrousel-gallery-container
 {
-    width:95%;
-    height:450px;
-    /* background:white; */
-    margin:100px 5px 0px 5px;
-    display:grid;
-    grid-template-columns:0.2fr 2fr 0.2fr;
-    grid-template-rows:350px 100px;
-    grid-template-areas:
-    "left-arrow-gallery track-container-gallery right-arrow-gallery"
-    "dots-image-container dots-image-container dots-image-container";
+    height:750px;
+    grid-template-columns:0.2fr 2.2fr 0.2fr;
+    grid-template-rows:600px 100px;
 
+}
+
+
+.dots-image-container img
+{
+   width:100%;
+   height:100%;
+   opacity:0.5;
+}
+.highlight
+{
+    opacity:1.0;
+   
 } 
+.dots-image-container img:hover
+{
+    opacity: 1;
+}
 }
