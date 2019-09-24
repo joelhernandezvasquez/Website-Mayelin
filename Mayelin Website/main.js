@@ -89,10 +89,13 @@ function openGallerySlideShow(e)
   if(e.target.closest("img"))
   {
     gallerySlideShow.classList.add("open");
+    
     selectGalleryImage(e);
     runSlideShow();
   }
 }
+
+
 
 function selectGalleryImage(e)
 {
@@ -106,21 +109,28 @@ function selectGalleryImage(e)
       const currentSlide = slidesArray[0];
       currentSlide.classList.add("slide-selected");
       const position = slideWidth * 0;
+
       const galleryDotImage = document.querySelector("#first-gallery-image");
-      galleryDotImage.classList.add("highlight");
+      galleryDotImage.children[0].style.opacity = "1";
+      galleryDotImage.classList.add("current-image-selected");
+      
       const previousButton = document.querySelector(".left");
       previousButton.style.display = "none";
-      
-      alert(galleryDotImage);
+ 
+    
     }
    else if(ImageCardSelected==="2")
    {
        const currentSlide = slidesArray[1];
        currentSlide.classList.add("slide-selected");
        const position = slideWidth * 1 + "px";
+
        const galleryDotImage = document.querySelector("#second-gallery-image");
-       galleryDotImage.classList.add("highlight-image");
+       galleryDotImage.children[0].style.opacity = "1";
+       galleryDotImage.classList.add("current-image-selected");
+
        track.style.transform = `translateX(-${position})`
+       
 
      }
     else if(ImageCardSelected==="3")
@@ -128,6 +138,10 @@ function selectGalleryImage(e)
       const currentSlide = slidesArray[2];
       currentSlide.classList.add("slide-selected");
       const position = slideWidth * 2 + "px";
+      const galleryDotImage = document.querySelector("#third-gallery-image");
+      galleryDotImage.children[0].style.opacity = "1";
+      galleryDotImage.classList.add("current-image-selected");
+
       track.style.transform = `translateX(-${position})`
     }
     else if(ImageCardSelected==="4")
@@ -135,6 +149,10 @@ function selectGalleryImage(e)
       const currentSlide = slidesArray[3];
       currentSlide.classList.add("slide-selected");
       const position = slideWidth * 3 + "px";
+      const galleryDotImage = document.querySelector("#fourth-gallery-image");
+      galleryDotImage.children[0].style.opacity = "1";
+      
+      galleryDotImage.classList.add("current-image-selected");
        track.style.transform = `translateX(-${position})`
     }
     else if(ImageCardSelected==="5")
@@ -142,6 +160,9 @@ function selectGalleryImage(e)
       const currentSlide = slidesArray[4];
       currentSlide.classList.add("slide-selected");
       const position = slideWidth * 4 + "px";
+      const galleryDotImage = document.querySelector("#fifth-gallery-image");
+      galleryDotImage.children[0].style.opacity = "1";
+      galleryDotImage.classList.add("current-image-selected");
        track.style.transform = `translateX(-${position})`
     }
     else if(ImageCardSelected==="6")
@@ -149,6 +170,9 @@ function selectGalleryImage(e)
       const currentSlide = slidesArray[5];
       currentSlide.classList.add("slide-selected");
       const position = slideWidth * 5 + "px";
+      const galleryDotImage = document.querySelector("#sixth-gallery-image");
+      galleryDotImage.children[0].style.opacity = "1";
+      galleryDotImage.classList.add("current-image-selected");
        track.style.transform = `translateX(-${position})`
        const nextButton = document.querySelector(".right");
        nextButton.style.display = "none";
@@ -209,6 +233,8 @@ function moveNextSlide()
  {
    previousButton.style.display = "block";
  }
+
+ updateImageDots("move-forward");
 }
 
 function movePreviousSlide()
@@ -235,6 +261,8 @@ function movePreviousSlide()
  {
    nextButton.style.display = "block";
  }
+
+ updateImageDots("move-back");
 } 
 
 function loadTestimonyCarrousel()
@@ -355,6 +383,37 @@ function updateDots(action)
     const previousDot = currentDot.previousElementSibling;
     currentDot.classList.remove("dot-selected");
     previousDot.classList.add("dot-selected");
+    return;
+  }
+}
+
+function updateImageDots(action)
+{
+  const currentImage = document.querySelector(".current-image-selected");
+  console.log(currentImage);
+
+  if(action==="move-forward")
+  {
+    const nextImage = currentImage.nextElementSibling;
+    console.log(nextImage);
+    nextImage.classList.add("current-image-selected");
+    currentImage.classList.remove("current-image-selected");
+    
+
+    currentImage.style.opacity = "0.5";
+    nextImage.children[0].style.opacity = "1";
+    return;
+  }
+
+  if(action==="move-back")
+  {
+    const previousImage = currentImage.previousElementSibling;
+    previousImage.classList.add("current-image-selected");
+    currentImage.classList.remove("current-image-selected");
+    
+
+    currentImage.style.opacity = "0.5";
+    previousImage.children[0].style.opacity = "1";
     return;
   }
 }
