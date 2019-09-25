@@ -458,7 +458,7 @@ const btnSubmit = document.querySelector("#submit");
 const galleryContainer = document.querySelector(".gallery-container");
 const closeGalleryContainer = document.querySelector(".close-gallery-container");
 const dotsButton = document.querySelector(".dots-container");
-
+const dotsImageContainer = document.querySelector(".dots-image-container");
 
 window.onload = loadTestimonyCarrousel();
 menuBar.addEventListener("mouseover",hoverMenuItems);
@@ -471,6 +471,7 @@ formulario.addEventListener("submit",submitAppointment);
 galleryContainer.addEventListener("click",openGallerySlideShow);
 closeGalleryContainer.addEventListener("click",closeGallery);
 dotsButton.addEventListener("click",targetDot);
+dotsImageContainer.addEventListener("click",targetDotsImageContainer);
 
 
 

@@ -390,18 +390,19 @@ function updateDots(action)
 function updateImageDots(action)
 {
   const currentImage = document.querySelector(".current-image-selected");
-  console.log(currentImage);
+  
 
   if(action==="move-forward")
   {
     const nextImage = currentImage.nextElementSibling;
-    console.log(nextImage);
+   
     nextImage.classList.add("current-image-selected");
     currentImage.classList.remove("current-image-selected");
     
 
-    currentImage.style.opacity = "0.5";
+    currentImage.children[0].style.opacity = "0.5";
     nextImage.children[0].style.opacity = "1";
+    
     return;
   }
 
@@ -411,9 +412,19 @@ function updateImageDots(action)
     previousImage.classList.add("current-image-selected");
     currentImage.classList.remove("current-image-selected");
     
-
-    currentImage.style.opacity = "0.5";
+    
+    currentImage.children[0].style.opacity = "0.5";
     previousImage.children[0].style.opacity = "1";
     return;
   }
+}
+
+function targetDotsImageContainer(e)
+{
+  const track = document.querySelector(".slide-container");
+  const currentSlide = document.querySelector(".current-slide");
+  
+
+
+
 }
