@@ -737,7 +737,7 @@ grid-template-areas:
 .testimony-container
 {
     grid-area:testimony-container;
-    /* border:1px solid yellow; */
+    border:1px solid yellow;
     display:grid;
     grid-template-columns:1fr;
     grid-template-areas:  
@@ -750,7 +750,7 @@ grid-template-areas:
 {
     grid-area:heading-testimony;
     height:180px;
-    /* border:1px solid red; */
+    /* border:1px solid red;   */
 }
 .heading-testimony h2
 {
@@ -783,7 +783,7 @@ grid-template-areas:
 .left-arrow
 {
     grid-area:left-arrow;
-     /* border:1px solid red; */
+     border:1px solid red;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -809,7 +809,7 @@ grid-template-areas:
     position:relative;
     transform: translateX(0);
     transition: transform 0.4s ease-out;
-     /* border:1px solid black;  */
+     border:1px solid black; 
       
     
 
@@ -835,7 +835,7 @@ grid-template-areas:
 .right-arrow
 {
     grid-area:right-arrow;
-    /* border:1px solid red;  */
+    border:1px solid red; 
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -845,7 +845,7 @@ grid-template-areas:
 .dots-container
 {
     grid-area:dots-container;
-     /* border:1px solid green;  */
+     border:1px solid green; 
      display: flex;
      flex-direction: row;
      align-items: center;
@@ -882,7 +882,7 @@ grid-template-areas:
 {
     width:95%;
     height:235px;
-    /* border:1px solid blue; */
+    border:1px solid blue;
     margin-top:10px;
     display:flex;
     flex-direction: column;
@@ -1058,7 +1058,7 @@ justify-content: space-around;
    
   .wrapper
 {
-    grid-template-rows: 750px auto 1200px  1400px 1200px  750px 580px 500px 340px;
+    grid-template-rows: 750px auto 1200px  1400px 1200px  700px 580px 500px 340px;
     row-gap:20px;
    grid-template-areas: 
     "header"
@@ -1210,7 +1210,6 @@ margin-top:0px;
     height:750px;
     grid-template-columns:0.2fr 2.2fr 0.2fr;
     grid-template-rows:600px 100px;
-
 }
 
 .dots-image-container img
@@ -1220,7 +1219,6 @@ margin-top:0px;
    opacity: 0.5;
 }
 
-
  .dots-image-container img:hover
 {
     opacity: 1;
@@ -1228,5 +1226,33 @@ margin-top:0px;
 .current-image-selected
 {
   
+}
+.heading-testimony
+{
+   display:flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+.carrousel
+{
+   
+    grid-template-columns: 0.2fr 1.5fr 0.2fr ;
+    grid-template-rows: 440px 40px;
+   
+}
+.testimony-content
+{
+    height:180px;
+  
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.testimony-content p 
+{
+    font-size: 18px;
+    margin-left:10px;
+
 }
 }

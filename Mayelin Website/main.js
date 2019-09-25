@@ -421,9 +421,125 @@ function updateImageDots(action)
 
 function targetDotsImageContainer(e)
 {
-  const track = document.querySelector(".slide-container");
-  const currentSlide = document.querySelector(".current-slide");
+  const track = document.querySelector(".track-container-gallery");
+  const currentSlide = document.querySelector(".slide-selected");
+
+  const currentDivDotImage = document.querySelector(".current-image-selected");
   
+
+  if(e.target.dataset.imagen==="first")
+  {
+   
+    const nextSlide = document.querySelector("#first-gallery-slide");
+    const amountToMove = nextSlide.style.left;
+    track.style.transform = `translateX(-${amountToMove})`;
+
+    currentSlide.classList.remove("slide-selected");
+    nextSlide.classList.add("slide-selected");
+
+    currentDivDotImage.classList.remove("current-image-selected");
+    e.target.parentElement.classList.add("current-image-selected");
+
+    currentDivDotImage.children[0].style.opacity ="0.5";
+    e.target.parentElement.children[0].style.opacity ="1"
+
+    return;
+  }
+
+  if(e.target.dataset.imagen==="second")
+  {
+   
+    const nextSlide = document.querySelector("#second-gallery-slide");
+    const amountToMove = nextSlide.style.left;
+    track.style.transform = `translateX(-${amountToMove})`;
+
+    currentSlide.classList.remove("slide-selected");
+    nextSlide.classList.add("slide-selected");
+
+    currentDivDotImage.classList.remove("current-image-selected");
+    e.target.parentElement.classList.add("current-image-selected");
+
+    currentDivDotImage.children[0].style.opacity ="0.5";
+    e.target.parentElement.children[0].style.opacity ="1"
+    return;
+  }
+
+  if(e.target.dataset.imagen==="third")
+  {
+   
+    const nextSlide = document.querySelector("#third-gallery-slide");
+    const amountToMove = nextSlide.style.left;
+    track.style.transform = `translateX(-${amountToMove})`;
+
+    currentSlide.classList.remove("slide-selected");
+    nextSlide.classList.add("slide-selected");
+
+    currentDivDotImage.classList.remove("current-image-selected");
+    e.target.parentElement.classList.add("current-image-selected");
+
+    currentDivDotImage.children[0].style.opacity ="0.5";
+    e.target.parentElement.children[0].style.opacity ="1"
+    
+    return;
+  }
+
+  if(e.target.dataset.imagen==="fourth")
+  {
+   
+    const nextSlide = document.querySelector("#fourth-gallery-slide");
+    const amountToMove = nextSlide.style.left;
+    track.style.transform = `translateX(-${amountToMove})`;
+
+    currentSlide.classList.remove("slide-selected");
+    nextSlide.classList.add("slide-selected");
+
+    currentDivDotImage.classList.remove("current-image-selected");
+    e.target.parentElement.classList.add("current-image-selected");
+
+    currentDivDotImage.children[0].style.opacity ="0.5";
+    e.target.parentElement.children[0].style.opacity ="1"
+    
+    return;
+  }
+
+  if(e.target.dataset.imagen==="fifth")
+  {
+   
+    const nextSlide = document.querySelector("#fifth-gallery-slide");
+    const amountToMove = nextSlide.style.left;
+    track.style.transform = `translateX(-${amountToMove})`;
+
+    currentSlide.classList.remove("slide-selected");
+    nextSlide.classList.add("slide-selected");
+
+    currentDivDotImage.classList.remove("current-image-selected");
+    e.target.parentElement.classList.add("current-image-selected");
+
+    currentDivDotImage.children[0].style.opacity ="0.5";
+    e.target.parentElement.children[0].style.opacity ="1"
+    
+    return;
+  }
+  if(e.target.dataset.imagen==="sixth")
+  {
+   
+    const nextSlide = document.querySelector("#sixth-gallery-slide");
+    const amountToMove = nextSlide.style.left;
+    track.style.transform = `translateX(-${amountToMove})`;
+
+    currentSlide.classList.remove("slide-selected");
+    nextSlide.classList.add("slide-selected");
+
+    currentDivDotImage.classList.remove("current-image-selected");
+    e.target.parentElement.classList.add("current-image-selected");
+
+    currentDivDotImage.children[0].style.opacity ="0.5";
+    e.target.parentElement.children[0].style.opacity ="1"
+    
+    return;
+  }
+
+ 
 
 
 
