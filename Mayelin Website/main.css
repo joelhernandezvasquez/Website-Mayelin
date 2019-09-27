@@ -314,12 +314,13 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
      /* border:1px solid green;  */
     display:grid;
     grid-template-columns:1fr;
-    grid-template-rows:100px 460px 600px;
+    grid-template-rows:100px 460px 560px 60px;
     grid-gap:5px;
     grid-template-areas: 
     "title"
     "about-us-picture"
-    "about-us-profile";
+    "about-us-profile"
+    "read-more-btn";
     
 }
 .title
@@ -358,6 +359,15 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
 {
  background:var(--primary-background-color);
  color:white;
+}
+
+.read-more-btn
+{
+    grid-area:read-more-btn;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    /* border:1px solid red; */
 }
 
 /* SERIVCES CONTAINER */
@@ -737,7 +747,7 @@ grid-template-areas:
 .testimony-container
 {
     grid-area:testimony-container;
-    border:1px solid yellow;
+    /* border:1px solid yellow; */
     display:grid;
     grid-template-columns:1fr;
     grid-template-areas:  
@@ -783,7 +793,7 @@ grid-template-areas:
 .left-arrow
 {
     grid-area:left-arrow;
-     border:1px solid red;
+     /* border:1px solid red; */
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -809,7 +819,7 @@ grid-template-areas:
     position:relative;
     transform: translateX(0);
     transition: transform 0.4s ease-out;
-     border:1px solid black; 
+     /* border:1px solid black;  */
       
     
 
@@ -835,7 +845,7 @@ grid-template-areas:
 .right-arrow
 {
     grid-area:right-arrow;
-    border:1px solid red; 
+    /* border:1px solid red;  */
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -845,7 +855,7 @@ grid-template-areas:
 .dots-container
 {
     grid-area:dots-container;
-     border:1px solid green; 
+     /* border:1px solid green;  */
      display: flex;
      flex-direction: row;
      align-items: center;
@@ -882,7 +892,7 @@ grid-template-areas:
 {
     width:95%;
     height:235px;
-    border:1px solid blue;
+    /* border:1px solid blue; */
     margin-top:10px;
     display:flex;
     flex-direction: column;
@@ -929,22 +939,26 @@ grid-template-areas:
     "email-contact"
     "schedule-box";
     grid-gap:5px;
+    /* border:1px solid red; */
    
 
 }
 .dirrection-contact
 {
     grid-area:dirrection-contact;
+ 
     
 }
 .phone-contact
 {
     grid-area:phone-contact;
+  
     
 }
 .email-contact
 {
     grid-area:email-contact;
+    
     
 }
 .schedule-box
@@ -1058,18 +1072,7 @@ justify-content: space-around;
    
   .wrapper
 {
-    grid-template-rows: 750px auto 1200px  1400px 1200px  700px 580px 500px 340px;
-    row-gap:20px;
-   grid-template-areas: 
-    "header"
-    "about-us"
-    "services-container"
-    "products-container"
-    "gallery-container"
-    "testimony-container"
-    "contact-container"
-    "horario-container"
-    "footer";
+    grid-template-rows: 750px auto 1120px  1400px 1200px  700px 600px 500px 320px;
 }
 .header
 {
@@ -1135,16 +1138,18 @@ transform:translateX(910px);
 .about-us
 {
     grid-template-columns:1fr 1fr;
-    grid-template-rows:100px 600px;
+    grid-template-rows:100px 520px 60px;
     grid-template-areas: 
     "title title"
-    "about-us-picture about-us-profile";
+    "about-us-picture about-us-profile"
+    "read-more-btn read-more-btn";
     /* border:1px solid green; */
     
 }
 .about-us-picture
 {
    margin-left:10px;
+   /* border:1px solid red; */
 }
 
 .about-us-profile p
@@ -1154,7 +1159,7 @@ line-height: 1.8;
 padding:0px 5px 10px 15px;  
 margin-top:0px;
 }
-.about-us button
+.read-more-btn button
 {
     padding:20px;
     width:200px;
@@ -1163,10 +1168,15 @@ margin-top:0px;
     align-self: flex-start;
     margin-left:10px;
 }
+.read-more-btn button:hover
+{
+    background:var(--primary-background-color);
+    color:var(--primary-color);
+}
 
 .services-container
 {
-    margin-top:0px;
+    margin-top:20px;
     /* border:1px solid black; */
     grid-template-columns: 1fr 1fr;
     grid-template-rows:100px repeat(2,450px);
@@ -1236,23 +1246,80 @@ margin-top:0px;
 }
 .carrousel
 {
-   
-    grid-template-columns: 0.2fr 1.5fr 0.2fr ;
-    grid-template-rows: 440px 40px;
-   
+   grid-template-rows: 420px 40px;
+   height:480px; 
 }
 .testimony-content
 {
     height:180px;
-  
-    display:flex;
-    flex-direction: column;
     align-items: center;
 }
 .testimony-content p 
 {
     font-size: 18px;
     margin-left:10px;
+    line-height: 1.7;
+    margin-top:0px;
 
+}
+.contact-container
+{
+   margin-top:40px;
+}
+
+#address-icon
+{
+    width:55px;
+}
+.paragraph
+{
+    font-size: 20px;
+}
+.schedule-box
+{
+   align-items: center;
+   justify-content: center;
+}
+
+.schedule-box h1,
+h2
+{
+    margin-top: 0px;
+}
+
+.social-media-container
+{
+height:70px;
+width:50%;
+}
+.footer p
+{
+   margin-top:20px;
+
+}
+
+}
+
+@media(min-width:799px)
+{
+    .header
+    {
+     background-position-y:33%;
+    }
+}
+
+@media(min-width:1023px)
+{
+    .header
+    {
+     background-position-y:33%;
+    }  
+
+.appointment-container
+{
+width:80%;
+height:auto;
+margin-top:10px;
+transform:translateX(1100px);
 }
 }
