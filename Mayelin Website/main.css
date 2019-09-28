@@ -384,13 +384,13 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
     "manicure-container"
     "pedicure-container"
     "drinks-container";
-   
 }
 
 .heading-service
 {
     grid-area:heading-service;
    /* border:1px solid silver; */
+  
 }
 
 .manicure-container
@@ -1310,16 +1310,154 @@ width:50%;
 
 @media(min-width:1023px)
 {
+    .wrapper
+{
+    grid-template-rows: 800px 900px 720px  1400px 1200px  700px 600px 500px 320px;
+    grid-template-areas: 
+    "header"
+    "about-us"
+    "services-container"
+    "products-container"
+    "gallery-container"
+    "testimony-container"
+    "contact-container"
+    "horario-container"
+    "footer";
+    row-gap: 40px;
+}
+
+.heading
+{
+    font-size: 2.4rem;
+}
+    
     .header
     {
-     background-position-y:33%;
-    }  
+    background-position-y:41%;
+    } 
+.header h2
+{
+    font-size:2.7rem;
+   
+}
+.header h1
+{
+    font-size:3.2rem;
+} 
+
+.menu-bar
+{
+    width:350px;
+    height:550px;
+}
+.menu-bar li
+{
+    font-size: 1.7rem;
+    margin:25px 0px 20px 0px;
+}
+
+#logo-brand
+{
+    width: 85px;
+    height:85px;
+    margin:5px 30px 0px 0px;
+}
 
 .appointment-container
 {
-width:80%;
-height:auto;
-margin-top:10px;
+width:50%;
 transform:translateX(1100px);
 }
+.openAppointmentForm.appointment-container
+{
+    transform: translateX(220px);
+}
+.appointment-container h1,h2
+{
+    font-size:2rem;
+}
+label
+{
+   font-size: 18px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea,
+select
+{
+ font-size: 18px;
+}
+.appointment-container button
+{
+    padding:25px;
+    height:55px; 
+}
+
+.about-us
+{
+    grid-template-rows:130px 650px 80px;
+   border:1px solid green;
+    
+}
+.about-us-profile p
+{
+font-size: 1.3rem;
+line-height: 1.9; 
+padding:0px 10px 10px 15px;  
+}
+.read-more-btn button
+{
+    align-self: center;
+    padding:30px;
+    width:240px;
+    height:60px;
+    font-size: 1.7rem;
+}
+.services-container
+{
+    margin-top:20px;
+    border:1px solid black;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:100px 450px;
+    grid-gap:15px;
+    grid-template-areas:
+    "heading-service heading-service heading-service" 
+    "manicure-container pedicure-container drinks-container";  
+}
+.drinks-container
+{
+    margin-top:0px;
+}
+.service-card
+{
+    width:97%;
+    height:560px;
+    margin-left:auto;
+    margin-right:auto;
+    /* border:1px solid red; */
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px 260px;
+    grid-template-areas:
+    "service-card-header"
+    "service-card-body";
+    grid-gap:0px;
+}
+.service-card-header img
+{
+  height:250px;
+}
+.service-card-body
+{
+    grid-area:service-card-body;
+    background:var(--primary-background-color);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
 }
