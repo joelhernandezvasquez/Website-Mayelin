@@ -194,7 +194,7 @@ function closeGallery(e)
 function runSlideShow()
 {
   const slides = Array.from(document.querySelectorAll(".slide"));
-  const slideWidth = slides[0].getBoundingClientRect().width + 200;
+  const slideWidth = slides[0].getBoundingClientRect().width + 2600;
   
   slides.forEach((slide,index)=>
   {

@@ -653,6 +653,7 @@ grid-template-areas:
     grid-template-areas:
     "left-arrow-gallery track-container-gallery right-arrow-gallery"
      "dots-image-container dots-image-container dots-image-container";
+     /* border:1px solid blue; */
     
    
 }
@@ -922,7 +923,7 @@ grid-template-areas:
 .contact-container
 {
     grid-area:contact-container;
-    /* border:1px solid purple; */
+    border:1px solid purple;
 }
 .map
 {
@@ -940,7 +941,7 @@ grid-template-areas:
     "email-contact"
     "schedule-box";
     grid-gap:5px;
-    /* border:1px solid red; */
+    border:1px solid red;
    
 
 }
@@ -1313,7 +1314,7 @@ width:50%;
 {
     .wrapper
 {
-    grid-template-rows: 800px 900px 720px  1400px 1200px  700px 600px 500px 320px;
+    grid-template-rows: 800px 900px 720px  1100px 850px  780px 700px 450px 320px;
     grid-template-areas: 
     "header"
     "about-us"
@@ -1419,10 +1420,10 @@ padding:0px 10px 10px 15px;
 .services-container
 {
     margin-top:20px;
-    border:1px solid black;
+    /* border:1px solid black; */
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows:100px 450px;
-    grid-gap:15px;
+    grid-gap:10px;
     grid-template-areas:
     "heading-service heading-service heading-service" 
     "manicure-container pedicure-container drinks-container";  
@@ -1450,6 +1451,55 @@ padding:0px 10px 10px 15px;
     align-items: center;
 }
 
+.carrousel-gallery-container
+{
+    height:850px;
+    grid-template-rows:700px 150px;
+    margin:50px 5px 0px 5px;
+}
 
+.dots-image-container > div
+{
+  height:130px;
+ 
+}
+.carrousel
+{
+width:82%;
+height:520px;
+grid-template-rows: 480px 40px;
+}
+.testimony-content
+{
+    height:200px;
+}
+.testimony-content p 
+{
+    font-size: 20px;
+}
+
+.contact-container
+{
+   margin-top:40px;
+}
+.map
+{
+    height: 550px;
+}
+
+.horario-container
+{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "dirrection-contact phone-contact email-contact"
+    "schedule-box schedule-box schedule-box";
+    border:1px solid red;
+   
+
+}
+.paragraph
+{
+    font-size: 18px;
+}
 
 }
