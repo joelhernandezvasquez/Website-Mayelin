@@ -923,7 +923,7 @@ grid-template-areas:
 .contact-container
 {
     grid-area:contact-container;
-    border:1px solid purple;
+    /* border:1px solid purple; */
 }
 .map
 {
@@ -941,27 +941,26 @@ grid-template-areas:
     "email-contact"
     "schedule-box";
     grid-gap:5px;
-    border:1px solid red;
+    /* border:1px solid red; */
    
 
 }
 .dirrection-contact
 {
     grid-area:dirrection-contact;
+    /* border:1px solid red; */
  
     
 }
 .phone-contact
 {
     grid-area:phone-contact;
-  
-    
+    /* border:1px solid red;   */
 }
 .email-contact
 {
     grid-area:email-contact;
-    
-    
+    /* border:1px solid red;      */
 }
 .schedule-box
 {
@@ -992,7 +991,6 @@ grid-template-areas:
 .info-contact
 {
     display:flex;
-    
     align-items:center;
     
 }
@@ -1314,7 +1312,7 @@ width:50%;
 {
     .wrapper
 {
-    grid-template-rows: 800px 900px 720px  1100px 850px  780px 700px 450px 320px;
+    grid-template-rows: 800px 900px 720px  1100px 850px  780px 700px 320px 300px;
     grid-template-areas: 
     "header"
     "about-us"
@@ -1493,13 +1491,32 @@ grid-template-rows: 480px 40px;
     grid-template-areas:
     "dirrection-contact phone-contact email-contact"
     "schedule-box schedule-box schedule-box";
-    border:1px solid red;
-   
-
+    /* border:1px solid green; */
 }
 .paragraph
 {
     font-size: 18px;
+}
+.icon
+{
+    width:40px;
+    padding:20px;
+}
+#address-icon
+{
+    width:80px;
+}
+.schedule-box
+{
+   height:180px;
+}
+#logo-brand-footer
+{
+    width:80px;
+}
+.social-media-container
+{
+width:40%;
 }
 
 }
