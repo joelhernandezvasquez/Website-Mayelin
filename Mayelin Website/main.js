@@ -539,8 +539,10 @@ function targetDotsImageContainer(e)
     return;
   }
 
- 
-
-
-
 }
+
+// END OF HOME PAGE
+
+// FUNCTIONS FOR ABOUT US PAGE
+
+

@@ -143,6 +143,11 @@
     font-size:2rem;
     margin-top:0px;
 }
+.menu-desktop
+{
+    display:none;
+}
+
 
 /* NAVIGATION BAR */
 
@@ -1050,6 +1055,51 @@ justify-content: space-around;
    padding:10px;
 }
 
+
+/* ********************** ABOUT US SECTION ********************************************************************************************* */
+
+
+.wrapper-about-us
+{
+    height:100vh;
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows: 450px repeat(5,300px);
+    grid-gap:20px;
+   grid-template-areas: 
+    "header-about-us"
+    "about-us-section"
+    "video-presentation-section"
+    "equipo-professinal-section"
+    "horario-container"
+    "footer";
+
+}
+.header-about-us
+{
+    grid-area:header-about-us;
+    background:linear-gradient(to bottom left,#e75aa1,transparent 80% ),url("img/mayelin profile.jpg"),no-repeat;
+    background-size:cover;
+}
+
+#intro-message
+{
+    width: 200px;
+    height:200px;
+    margin-top:60px;
+    margin-left:auto;
+    margin-right:auto;
+    font-size: 1.5rem;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
 @media(min-width:359px)
 {
     .services-container
@@ -1520,3 +1570,4 @@ width:40%;
 }
 
 }
+
