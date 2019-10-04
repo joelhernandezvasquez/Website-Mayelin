@@ -1058,13 +1058,20 @@ justify-content: space-around;
 
 /* ********************** ABOUT US SECTION ********************************************************************************************* */
 
+.heading-title
+{
+    text-align: center;
+    color:var(--primary-background-color);
+    font-family: var(--primary-font);
+    font-size: 1.8rem;
+}
 
 .wrapper-about-us
 {
     height:100vh;
     display:grid;
     grid-template-columns:1fr;
-    grid-template-rows: 450px repeat(5,300px);
+    grid-template-rows: 450px auto 420px  1000px repeat(2,300px);
     grid-gap:20px;
    grid-template-areas: 
     "header-about-us"
@@ -1096,6 +1103,101 @@ justify-content: space-around;
     align-items: center;
     justify-content: center;
 
+}
+.about-us-section
+{
+    grid-area:about-us-section;
+    /* border:1px solid red; */
+}
+
+
+.about-us-section p
+{
+    padding:0px 10px 0px 10px;
+    font-size: 1.1rem;
+    font-family: var(--secondary-font);
+    line-height: 1.8;
+}
+.about-us-section img
+{
+    width: 100%;
+}
+
+.video-presentation-section
+{
+    grid-area:video-presentation-section;
+    background:linear-gradient(#e75aa1,transparent 120% ),url("img/5d4242ed02c7534fac626f53_jake-peterson-VJ4pn_PSBLo-unsplash.jpg"),no-repeat;
+    background-size:cover;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.video-presentation-section h1
+{
+    font-family: var(--primary-font);
+    color:var(--primary-color);
+    font-size: 2.3rem;
+    margin-bottom: 0px;
+}
+.video-presentation-section p
+{
+    padding:0px 20px 0px 20px;
+    font-size: 1.1rem;
+    font-family: var(--secondary-font);
+    line-height: 1.8;
+    color:var(--primary-color);
+    font-weight: 500;
+}
+.video-presentation-section input
+{
+    width:80px;
+    height:80px;
+}
+
+.equipo-professinal-section
+{
+    grid-area:equipo-professinal-section;
+    border:1px solid black;
+    background:rgba(229, 230, 232, 0.76);
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "heading-professinal-section"
+    "team-container";
+}
+.equipo-professinal-section p
+{
+    padding:0px 10px 0px 10px;
+    font-size: 1.1rem;
+    font-family: var(--secondary-font);
+    line-height: 1.8;
+}
+
+.heading-professinal-section
+{
+    grid-area:heading-professinal-section;
+    background:white;
+    height:250px;
+}
+
+.team-container 
+{
+    grid-area:team-container;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+
+}
+
+.card-team
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:400px;
+    height:400px;
+    background:white;
+    border-radius: 20px;
 }
 
 
