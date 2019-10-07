@@ -1071,7 +1071,7 @@ justify-content: space-around;
     height:100vh;
     display:grid;
     grid-template-columns:1fr;
-    grid-template-rows: 450px auto 420px  1000px repeat(2,300px);
+    grid-template-rows: 450px auto 450px  auto auto auto;
     grid-gap:20px;
    grid-template-areas: 
     "header-about-us"
@@ -1087,6 +1087,7 @@ justify-content: space-around;
     grid-area:header-about-us;
     background:linear-gradient(to bottom left,#e75aa1,transparent 80% ),url("img/mayelin profile.jpg"),no-repeat;
     background-size:cover;
+   
 }
 
 #intro-message
@@ -1113,10 +1114,10 @@ justify-content: space-around;
 
 .about-us-section p
 {
-    padding:0px 10px 0px 10px;
+    padding:0px 10px 5px 15px;
     font-size: 1.1rem;
     font-family: var(--secondary-font);
-    line-height: 1.8;
+    line-height: 1.9;
 }
 .about-us-section img
 {
@@ -1131,6 +1132,8 @@ justify-content: space-around;
     display:flex;
     flex-direction: column;
     align-items: center;
+    margin-top:10px;
+    margin-bottom: 10px;
 
 }
 .video-presentation-section h1
@@ -1148,17 +1151,28 @@ justify-content: space-around;
     line-height: 1.8;
     color:var(--primary-color);
     font-weight: 500;
+    text-align: center;
 }
 .video-presentation-section input
 {
-    width:80px;
-    height:80px;
+    width:100px;
+    height:100px;
+    /* background:white;
+    padding:0px 20px 0px 20px; */
+   
+}
+#play-button-container
+{
+    width:150px;
+    height:150px;
+    background:white;
+    border-radius: 20%;
 }
 
 .equipo-professinal-section
 {
     grid-area:equipo-professinal-section;
-    border:1px solid black;
+    /* border:1px solid black; */
     background:rgba(229, 230, 232, 0.76);
     display:grid;
     grid-template-columns: 1fr;
@@ -1168,17 +1182,19 @@ justify-content: space-around;
 }
 .equipo-professinal-section p
 {
-    padding:0px 10px 0px 10px;
+    padding:0px 10px 0px 0px;
     font-size: 1.1rem;
     font-family: var(--secondary-font);
     line-height: 1.8;
+    text-align:center;
 }
 
 .heading-professinal-section
 {
     grid-area:heading-professinal-section;
     background:white;
-    height:250px;
+    height:300px;
+    /* border:1px solid black; */
 }
 
 .team-container 
@@ -1186,7 +1202,7 @@ justify-content: space-around;
     grid-area:team-container;
     display:grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-
+ row-gap:20px;
 }
 
 .card-team
@@ -1194,10 +1210,31 @@ justify-content: space-around;
     display:flex;
     flex-direction: column;
     align-items: center;
-    width:400px;
-    height:400px;
+    width:300px;
+    height:540px;
     background:white;
-    border-radius: 20px;
+    border-radius: 10px;
+
+    margin:10px auto 10px auto;
+}
+.card-team img
+{
+    width: 280px;
+    height:400px;
+    padding:10px;
+}
+.card-team h1
+{
+    margin-bottom: 0px;
+}
+.card-team h2
+{
+    font-family: var(--secondary-font);
+    margin-top:0px;
+}
+.horario-container
+{
+    grid-area:horario-container;
 }
 
 
@@ -1208,13 +1245,31 @@ justify-content: space-around;
     {
         margin-top:40px;
     }
+    
+
+}
+
+@media(min-width:374px)
+{
+    .heading-professinal-section
+{
+   height:250px;
+    
+}
 }
 @media(min-width:413px) 
 {
+    
     .about-us-profile p
     {
         padding:20px 15px 10px 15px; 
     }
+    .wrapper-about-us
+{
+   grid-template-rows: 500px auto 420px  3200px auto auto;
+
+}
+
 
 }
 
