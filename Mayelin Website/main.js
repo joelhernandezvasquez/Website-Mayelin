@@ -545,4 +545,10 @@ function targetDotsImageContainer(e)
 
 // FUNCTIONS FOR ABOUT US PAGE
 
+function openVideo(e)
+{
+  const openVideo = document.querySelector(".video-modal-box");
+  openVideo.classList.add("open-video-modal");
+  
+}
 

@@ -6,10 +6,12 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
     <script src="main.js"> </script>
+    
 </head>
 
 <body>
 
+    
     <div class="wrapper-about-us">
 
         <div class="header-about-us">
@@ -69,9 +71,16 @@
                 <input type="image" src="img/iconfinder_play_alt_118620.png">
             </div>
         </div>
+
+         <div class="video-modal-box">
+            <input type="image" src="img/iconfinder_error-fill_3017946.png" id="close-icon-video">
+            
+            
+            <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FMayelinNailsAndBar%2Fvideos%2F1195381063963392%2F&show_text=0&width=560" width="300" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="1" allowTransparency="true" allowFullScreen="true"></iframe>
+         </div>
     </div>
 
-        </div>
+        
 
         <div class="equipo-professinal-section">
  
@@ -147,11 +156,13 @@
     
     const menuIcon = document.querySelector(".hamburger-icon-container");
     const menuBar = document.querySelector(".menu-bar");
+    const ModalVideoBox = document.querySelector("#play-button input");
 
     menuBar.addEventListener("mouseover",hoverMenuItems);
    menuBar.addEventListener("mouseout",hoverOutMenuItems);
     menuBar.addEventListener("mouseover",hoverLinks);
     menuIcon.addEventListener("click",openMenuBar);
+    ModalVideoBox.addEventListener("click",openVideo);
 
     </script>
 
