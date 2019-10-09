@@ -76,8 +76,10 @@
             <input type="image" src="img/iconfinder_error-fill_3017946.png" id="close-icon-video">
             
             
-            <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FMayelinNailsAndBar%2Fvideos%2F1195381063963392%2F&show_text=0&width=560" width="300" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="1" allowTransparency="true" allowFullScreen="true"></iframe>
-         </div>
+            <div class="video-iframe-container"><iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FMayelinNailsAndBar%2Fvideos%2F1195381063963392%2F&show_text=0&width=560" width="auto" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="1" allowTransparency="true" allowFullScreen="true"></iframe>
+         
+            </div>
+        </div>
     </div>
 
         
@@ -157,12 +159,14 @@
     const menuIcon = document.querySelector(".hamburger-icon-container");
     const menuBar = document.querySelector(".menu-bar");
     const ModalVideoBox = document.querySelector("#play-button input");
+    const closeVideoButton = document.querySelector("#close-icon-video");
 
     menuBar.addEventListener("mouseover",hoverMenuItems);
    menuBar.addEventListener("mouseout",hoverOutMenuItems);
     menuBar.addEventListener("mouseover",hoverLinks);
     menuIcon.addEventListener("click",openMenuBar);
     ModalVideoBox.addEventListener("click",openVideo);
+    closeVideoButton.addEventListener("click",closeVideo);
 
     </script>
 

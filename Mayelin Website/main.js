@@ -552,3 +552,9 @@ function openVideo(e)
   
 }
 
+function closeVideo()
+{
+  const videoModalBox = document.querySelector(".video-modal-box");
+  videoModalBox.classList.remove("open-video-modal");
+}
+
