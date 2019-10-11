@@ -1215,16 +1215,22 @@ justify-content: space-around;
 }
 .video-modal-box iframe
 {
-   margin-top:50px;
+   /* margin-top:50px;
     margin-left:20px;
    margin-right:auto;
-    width:90%;
+    width:90%; */
+    width:100%;
     
 }
 
 .video-iframe-container
 {
-    
+  width:95%;
+  height:300px;
+  /* border:1px solid red; */
+  margin-top:100px; 
+  margin-left:auto;
+  margin-right: auto; 
 }
 
 
@@ -1273,8 +1279,13 @@ justify-content: space-around;
     height:540px;
     background:white;
     border-radius: 10px;
-
-    margin:10px auto 10px auto;
+   margin:10px auto 10px auto;
+   transition:box-shadow 0.2s,transform 0.2s;
+}
+.card-team:hover
+{
+    box-shadow: -1px 0px 13px -2px rgba(0,0,0,0.75);
+    transform:translateY(-25px);
 }
 .card-team img
 {
@@ -1561,6 +1572,25 @@ width:50%;
 .footer p
 {
    margin-top:20px;
+
+}
+
+/* ********************** ABOUT US SECTION ********************************************************************************************* */
+
+.wrapper-about-us
+{
+    height:100vh;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows: 450px auto 480px  auto auto auto;
+    grid-gap:20px;
+   grid-template-areas: 
+    "header-about-us header-about-us header-about-us"
+    "about-us-section about-us-section about-us-section"
+    "video-presentation-section video-presentation-section video-presentation-section"
+    "equipo-professinal-section equipo-professinal-section equipo-professinal-section"
+    "horario-container horario-container horario-container"
+    "footer footer footer";
 
 }
 
