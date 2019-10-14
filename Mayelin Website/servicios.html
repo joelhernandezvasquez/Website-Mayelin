@@ -1,0 +1,141 @@
+<html>
+<head>
+        <link href="main.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    
+        <script src="main.js"> </script>
+</head>
+
+<body>
+
+    <div class="wrapper-servicios">
+
+        <div class="header-servicios">
+                
+            <div class="hamburger-icon-container">
+            
+                        <div class="bar1"> </div>
+                        <div class="bar2"> </div>
+                        <div class="bar3"> </div>
+                </div> 
+
+                <img src="img/logo.jpg" alt="No image" id="logo-brand">
+
+                <div id="intro-message">
+                        <h1 class="font-style">Servicios</h1>
+                        <button class="btn">Reserva Hoy!</button>
+                    </div>
+
+        </div>
+
+        <div class="menu-bar">
+                <ul>
+                        <li> <a href="index.html"> Home </a></li> 
+                        <li> <a href="aboutUs.html"> Sobre Nosotros </a></li> 
+                        <li> <a href="servicios.html"> Servicios </a> </li> 
+                        <li> <a href="#"> Productos </a></li> 
+                        <li> <a href="#"> Galleria </a></li> 
+                        <li> <a href="#"> Contacto </a></li>     
+                     </ul>
+        </div>
+
+        <div class="appointment-container">
+     
+                <input type="image" src="img/iconfinder_basics-22_296812.png" id="close-icon">
+               
+                <div class="form">
+                  <h1>Haz Tu Cita</h1>
+                  <h2>llama al 809-447-9942</h2>
+               
+                  <form action="#" method="post" id="form-appointment" >
+       
+                 
+                  <label for="name">Nombre:</label>
+                  <input type="text" id="name" name="nombre">
+                  <p class="error-message" id="nameError"> *Por favor introdusca su nombre</p>
+       
+                  <label for="servicios">Servicios:</label>
+                  <select>
+                       <optgroup label="Servicios"></optgroup>
+                       <option value="manicure"> Manicure </option>
+                       <option value="pedicure"> pedicure </option>
+                       <option value="drinks"> Drinks </option>
+                  </select>
+       
+                  <label for="phone">Phone Number:</label>
+                  <input type="tel" id="phone" name="phoneNumber">
+       
+                  <label for="email"> Email:</label>
+                  <input type="email" id="email" name="email">
+                  <p class="error-message" id="emailError"> *Por favor introdusca su email</p>
+                  
+                  <label for="mensaje"> Mensaje: </label>
+                  <textarea id="mensaje">
+       
+                  </textarea>
+        
+                  <button type="submit" id="submit">Enviar</button>
+       
+                </form>
+       
+               </div>
+               
+           </div>
+
+        <div class="servicios-info">
+                <h1 class="heading"> Nuestros Servicios</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. 
+                    Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. 
+                    Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+                    Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. 
+                    Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+                </p>
+
+        </div>
+
+        <div class="servicios-features">
+             
+            <div class="services-card" id="manicure">
+             
+                <h1> Manicure</h1>
+             </div>
+             
+        </div>
+
+        <div class="prices-container">
+
+        </div>
+
+        <div class="contact-container-services">
+
+        </div>
+
+        <div class="testimony-servicios">
+
+        </div>
+
+        <div class="footer">
+
+        </div>
+
+    </div>
+
+    <script>
+     const menuIcon = document.querySelector(".hamburger-icon-container");
+    const menuBar = document.querySelector(".menu-bar");
+    const btnAppointment = document.querySelector(".btn");
+    const closebtn = document.querySelector("#close-icon");
+    const formulario = document.querySelector("#form-appointment");
+   const btnSubmit = document.querySelector("#submit");
+
+    menuBar.addEventListener("mouseover",hoverMenuItems);
+   menuBar.addEventListener("mouseout",hoverOutMenuItems);
+    menuBar.addEventListener("mouseover",hoverLinks);
+    menuIcon.addEventListener("click",openMenuBar);
+   btnAppointment.addEventListener("click",openAppointmentForm);
+  closebtn.addEventListener("click",closeAppointmentForm);
+  formulario.addEventListener("submit",submitAppointment);
+    </script>
+</body>
+</html>

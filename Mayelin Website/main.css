@@ -374,6 +374,13 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
     justify-content: center;
     /* border:1px solid red; */
 }
+.read-more-btn a
+{
+    text-decoration: none;
+    padding:5px;
+}
+
+
 
 /* SERIVCES CONTAINER */
 .services-container
@@ -1308,6 +1315,94 @@ justify-content: space-around;
 }
 
 
+/* ********************** SERVICIOS SECTION ********************************************************************************************* */
+
+#manicure
+{
+    background:linear-gradient(to bottom left,#e75aa1,transparent 100% ),url("img/67708934_2509067355803249_1973672746801954816_n.jpg"),no-repeat;
+    background-size:cover;
+}
+.wrapper-servicios
+{
+    height:100vh;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 450px 600px  1000px repeat(4,400px);
+    grid-gap:30px;
+    grid-template-areas: 
+    "header-servicios"
+    "servicios-info"
+    "servicios-features"
+    "prices-container"
+    "contact-container-services"
+    "testimony-servicios"
+    "footer";
+
+}
+.header-servicios
+{
+    grid-area:header-servicios;
+    background:linear-gradient(to bottom left,#e75aa1,transparent 60% ),url("img/5d46fa3c3a861da5968975b2_493516-PH5PBU-923.jpg"),no-repeat;
+    background-size:cover;
+    /* border:1px solid black; */
+}
+.servicios-info
+{
+    grid-area:servicios-info;
+    border:1px solid red;
+}
+.servicios-info p
+{
+    padding:0px 10px 5px 15px;
+    font-size: 1.1rem;
+    font-family: var(--secondary-font);
+    line-height: 1.9;
+}
+.servicios-features
+{
+    grid-area:servicios-features;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    border:1px solid purple;
+}
+.services-card
+{
+ width:320px;
+ height:300px;
+ background:var(--primary-background-color);
+ margin-left:auto;
+ margin-right: auto;
+ margin-top:20px;
+ display:flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+
+}
+.services-card h1
+{
+    font-family: var(--primary-font);
+    color:var(--primary-color);
+    font-size: 3rem;
+}
+.prices-container
+{
+    grid-area:prices-container;
+    border:1px solid green;
+}
+.contact-container-services
+{
+    grid-area:contact-container-services;
+    border:1px solid blue;
+}
+.testimony-servicios
+{
+    grid-area:testimony-servicios;
+    border:1px solid yellow;
+}
+
+
+
 
 @media(min-width:359px)
 {
@@ -1436,16 +1531,16 @@ line-height: 1.8;
 padding:0px 5px 10px 15px;  
 margin-top:0px;
 }
-.read-more-btn button
+.read-more-btn a
 {
-    padding:20px;
+    padding:10px;
     width:200px;
     height:50px;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     align-self: flex-start;
     margin-left:10px;
 }
-.read-more-btn button:hover
+.read-more-btn a:hover
 {
     background:var(--primary-background-color);
     color:var(--primary-color);
