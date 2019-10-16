@@ -1322,12 +1322,23 @@ justify-content: space-around;
     background:linear-gradient(to bottom left,#e75aa1,transparent 100% ),url("img/67708934_2509067355803249_1973672746801954816_n.jpg"),no-repeat;
     background-size:cover;
 }
+#pedicure
+{
+    background:linear-gradient(to bottom left,#e75aa1,transparent 100% ),url("img/JDUY1480.jpg"),no-repeat;
+    background-size:cover; 
+}
+
+#drinks
+{
+    background:linear-gradient(to bottom left,#e75aa1,transparent 100% ),url("img/KHZE7597.jpg"),no-repeat;
+    background-size:cover;  
+}
 .wrapper-servicios
 {
     height:100vh;
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 450px 600px  1000px repeat(4,400px);
+    grid-template-rows: 450px 600px  auto repeat(4,400px);
     grid-gap:30px;
     grid-template-areas: 
     "header-servicios"
@@ -1368,15 +1379,16 @@ justify-content: space-around;
 .services-card
 {
  width:320px;
- height:300px;
+ height:320px;
  background:var(--primary-background-color);
  margin-left:auto;
  margin-right: auto;
- margin-top:20px;
+ margin-top:25px;
  display:flex;
  flex-direction: column;
  align-items: center;
  justify-content: center;
+ border-radius:5px;
 
 }
 .services-card h1
