@@ -1338,7 +1338,7 @@ justify-content: space-around;
     height:100vh;
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 450px 600px  auto repeat(4,400px);
+    grid-template-rows: 450px 600px  auto  auto  auto 750px 340px;
     grid-gap:30px;
     grid-template-areas: 
     "header-servicios"
@@ -1401,6 +1401,62 @@ justify-content: space-around;
 {
     grid-area:prices-container;
     border:1px solid green;
+}
+
+.price-card
+{
+    width:330px;
+    height:auto;
+    margin-left:auto;
+    margin-right:auto;
+    box-shadow: 0 15px 20px -12px rgba(0,0,0,.8);
+    /* border:1px solid black; */
+    margin-top:40px;
+   
+}
+#manicure-bg
+{
+    background:linear-gradient(to bottom left,#e75aa1,transparent 120% ),url("img/5d4a0e378f3da1588bb2b0d0_Manicure2.jpg"),no-repeat;
+    background-size:cover;
+}
+
+#pedicure-bg
+{
+    background:linear-gradient(to bottom left,#e75aa1,transparent 120% ),url("img/pedicuree.png"),no-repeat;
+    background-size:cover;
+}
+
+#drink-bg
+{
+    background:linear-gradient(to bottom left,#e75aa1,transparent 120% ),url("img/WEUX3015.jpg"),no-repeat;
+    background-size:cover;
+}
+.price-card-header
+{
+    width:330px;
+    height:250px;
+    display:flex;
+   justify-content:space-around;
+   align-items: flex-end;
+}
+.price-card-header h2
+{
+  color:var(--primary-color);
+  font-size: 1.8rem;
+}
+.price-item
+{
+    /* border:1px solid blue; */
+    width:100%;
+    height:50px;
+    margin-top:10px;
+    display:flex;
+    justify-content: space-between;
+}
+.price-item h2
+{
+    padding:10px;
+    font-size: 1.4rem;
 }
 .contact-container-services
 {
