@@ -1338,8 +1338,8 @@ justify-content: space-around;
     height:100vh;
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 450px 600px  auto  auto  auto 750px 340px;
-    grid-gap:30px;
+    grid-template-rows: 450px auto  auto  auto  auto 700px 360px;
+    grid-gap:20px;
     grid-template-areas: 
     "header-servicios"
     "servicios-info"
@@ -1360,11 +1360,11 @@ justify-content: space-around;
 .servicios-info
 {
     grid-area:servicios-info;
-    border:1px solid red;
+    /* border:1px solid red; */
 }
 .servicios-info p
 {
-    padding:0px 10px 5px 15px;
+    padding:0px 10px 5px 10px;
     font-size: 1.1rem;
     font-family: var(--secondary-font);
     line-height: 1.9;
@@ -1373,17 +1373,18 @@ justify-content: space-around;
 {
     grid-area:servicios-features;
     display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    border:1px solid purple;
+    grid-template-columns: repeat(auto-fit,minmax(340px,1fr));
+    /* border:1px solid purple; */
+   
 }
 .services-card
 {
- width:320px;
+ width:340px;
  height:320px;
  background:var(--primary-background-color);
  margin-left:auto;
  margin-right: auto;
- margin-top:25px;
+ margin-top:20px;
  display:flex;
  flex-direction: column;
  align-items: center;
@@ -1400,7 +1401,8 @@ justify-content: space-around;
 .prices-container
 {
     grid-area:prices-container;
-    border:1px solid green;
+    /* border:1px solid green; */
+    margin-top:10px;
 }
 
 .price-card
@@ -1412,6 +1414,7 @@ justify-content: space-around;
     box-shadow: 0 15px 20px -12px rgba(0,0,0,.8);
     /* border:1px solid black; */
     margin-top:40px;
+    padding-bottom: 20px;
    
 }
 #manicure-bg
@@ -1461,12 +1464,14 @@ justify-content: space-around;
 .contact-container-services
 {
     grid-area:contact-container-services;
-    border:1px solid blue;
+    margin-top:20px;
+    /* border:1px solid blue; */
 }
 .testimony-servicios
 {
     grid-area:testimony-servicios;
-    border:1px solid yellow;
+    margin-top:20px;
+   
 }
 
 
@@ -1489,6 +1494,7 @@ justify-content: space-around;
    height:250px;
     
 }
+
 }
 @media(min-width:413px) 
 {
@@ -1500,6 +1506,13 @@ justify-content: space-around;
     .wrapper-about-us
 {
    grid-template-rows: 500px auto 420px  3200px auto auto;
+
+}
+
+.services-card
+{
+ width:380px;
+ 
 
 }
 
