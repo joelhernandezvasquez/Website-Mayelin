@@ -1401,9 +1401,40 @@ justify-content: space-around;
 .prices-container
 {
     grid-area:prices-container;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px repeat(3,auto);
+    grid-template-areas:
+    "prices-container-header"
+    "price-card-A"
+    "price-card-B"
+    "price-card-C";
+
     /* border:1px solid green; */
     margin-top:10px;
+} 
+   
+    
+.prices-container-header
+{
+    grid-area:prices-container-header;
 }
+.price-card-A
+{
+    grid-area:price-card-A;
+   
+}
+
+.price-card-B
+{
+    grid-area:price-card-B;
+}
+.price-card-C
+{
+    grid-area:price-card-C;
+}
+
+
 
 .price-card
 {
@@ -1816,7 +1847,7 @@ font-size: 1.4rem;
 {
     
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 750px auto  auto  auto  auto 700px 360px;
+    grid-template-rows: 750px auto  auto  auto  auto 700px auto;
     grid-template-areas: 
     "header-servicios header-servicios"
     "servicios-info servicios-info"
@@ -1865,29 +1896,50 @@ font-size: 1.4rem;
 }
 .prices-container
 {
-    grid-area:prices-container;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 100px auto;
     grid-template-areas:
-    "prices-container-header prices-container-header prices-container-header"
-    "price-card-A price-card-B price-card-C";
-    border:1px solid green;
+    "prices-container-header prices-container-header"
+    "price-card-A price-card-B"
+    "price-card-C price-card-C";
+    /* border:1px solid green; */
     margin-top:30px;
     
 }
-.price-card-A
+.prices-container div.price-card:nth-child(4)
 {
-    grid-area:price-card-A;
-    border:1px solid red;
+    width:500px;
 }
-
-.price-card-B
+.prices-container div.price-card:nth-child(4) div.price-card-header
 {
-    grid-area:price-card-B;
+    width:500px;
+    height:340px;
 }
-.price-card-C
+.price-card-C h2
 {
-    grid-area:price-card-C;
+    font-size: 2rem;
+}
+.price-card-C .price-item h2
+{
+    font-size: 1.5rem;
+}
+.contact-container-services
+{
+    margin-top:40px;
+}
+.testimony-servicios
+{
+    grid-area:testimony-servicios;
+    margin-top:40px;
+   
+}
+.heading-testimony h2
+{
+    font-size: 2.3rem;
+}
+.heading-testimony h1
+{
+    font-size: 2.2rem;
 }
 
 
@@ -1933,6 +1985,27 @@ font-size: 1.4rem;
    font-size: 1.3rem;
     margin-bottom: 30px;
     line-height: 2.0
+}
+
+ /* ***************************** SERVICIOS ************************************ */
+
+ .servicios-features
+{
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    /* border:1px solid red; */
+    
+}
+
+.services-card
+{
+    width:350px;
+ height:320px;
+  
+   
+}
+.services-card h1
+{
+    font-size: 2.9rem;
 }
 
 }
