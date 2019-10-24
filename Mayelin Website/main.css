@@ -1801,11 +1801,94 @@ font-size: 1.4rem;
    line-height: 1.9;
 }
 
+.heading
+{
+    font-size: 3rem;
+}
 .heading-professinal-section
 {
     height:200px;
 }
 
+ /* ***************************** SERVICIOS ************************************ */
+
+ .wrapper-servicios
+{
+    
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 750px auto  auto  auto  auto 700px 360px;
+    grid-template-areas: 
+    "header-servicios header-servicios"
+    "servicios-info servicios-info"
+    "servicios-features servicios-features"
+    "prices-container prices-container"
+    "contact-container-services contact-container-services"
+    "testimony-servicios testimony-servicios"
+    "footer footer";
+
+}
+.header-servicios
+{
+   
+    background:linear-gradient(to bottom left,#e75aa1,transparent 70% ),url("img/5d46fa3c3a861da5968975b2_493516-PH5PBU-923.jpg"),no-repeat;
+    background-size:cover;
+}
+#intro-message .btn
+{
+    width:280px;
+}
+
+.servicios-info h1
+{
+    font-size: 2.5rem;
+}
+.servicios-info p
+{
+    padding:0px 10px 10px 10px;
+    font-size: 1.3rem;
+}
+.servicios-features
+{
+    grid-template-columns: repeat(auto-fit,minmax(380px,1fr));
+    
+}
+
+.services-card
+{
+    width:85%;
+    height:550px;
+   
+}
+.services-card h1
+{
+    font-size: 4rem;
+}
+.prices-container
+{
+    grid-area:prices-container;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px auto;
+    grid-template-areas:
+    "prices-container-header prices-container-header prices-container-header"
+    "price-card-A price-card-B price-card-C";
+    border:1px solid green;
+    margin-top:30px;
+    
+}
+.price-card-A
+{
+    grid-area:price-card-A;
+    border:1px solid red;
+}
+
+.price-card-B
+{
+    grid-area:price-card-B;
+}
+.price-card-C
+{
+    grid-area:price-card-C;
+}
 
 
 }
