@@ -465,6 +465,12 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
     display:flex;
     flex-direction: column;
     align-items: center;
+    
+
+}
+.service-card-body
+{
+   
 }
 
 .service-card-body h2
@@ -1446,7 +1452,13 @@ justify-content: space-around;
     /* border:1px solid black; */
     margin-top:40px;
     padding-bottom: 20px;
+    transition:background 0.3s;
    
+}
+.price-card:hover
+{
+    background:#f8d6e8;
+    
 }
 #manicure-bg
 {
@@ -1487,6 +1499,8 @@ justify-content: space-around;
     display:flex;
     justify-content: space-between;
 }
+
+
 .price-item h2
 {
     padding:10px;
@@ -1504,6 +1518,71 @@ justify-content: space-around;
     margin-top:20px;
    
 }
+
+
+/* *******************************************************PRODUCTS SECTION******************************************************************* */
+
+.wrapper-products
+{
+    height:100vh;
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:450px 700px 320px;
+    grid-template-areas: 
+    "header-products"
+    "products-container-features"
+    "footer";
+    grid-gap:20px;
+}
+
+.header-products
+{
+    grid-area:header-products;
+    background:linear-gradient(to bottom left,#e75aa1,transparent 100% ),url("img/5d4c15f6e11fbe1767619e42_the-honest-company-QNWLBff7f9M-unsplash.jpg"),no-repeat;
+    background-size:cover;
+    /* border:1px solid green; */
+}
+
+.products-container-features
+{
+    grid-area:products-container-features;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr)) ;
+    border:1px solid red;
+}
+
+.card-products
+{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "card-products-header"
+    "card-products-body";
+    width:320px;
+    height:400px;
+    border:1px solid blue;
+    margin-left:auto;
+    margin-right: auto;
+
+}
+
+.card-products-header
+{
+    grid-area:card-products-header;
+    border:1px solid silver;
+}
+.card-products-body
+{
+    grid-area:card-products-body;
+    background:gold;
+}
+
+.card-products-header img
+{
+    max-width: 100%;
+}
+
+
 
 
 
@@ -1544,7 +1623,6 @@ justify-content: space-around;
 {
  width:380px;
  
-
 }
 
 
@@ -1998,7 +2076,7 @@ font-size: 1.4rem;
 
 .services-card
 {
-    width:350px;
+ width:350px;
  height:320px;
   
    
@@ -2284,7 +2362,7 @@ font-size: 1.5rem;
 {
     
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 800px auto  auto  auto  auto 700px auto;
+    grid-template-rows: 800px auto  auto  auto  auto 750px auto;
     grid-template-areas: 
     "header-servicios header-servicios header-servicios"
     "servicios-info servicios-info servicios-info"
@@ -2323,6 +2401,14 @@ width:320px;
    
     
 }
+.prices-container div.price-card:nth-child(2)
+{
+  height:920px;
+}
+.prices-container div.price-card:nth-child(3)
+{
+  height:620px;
+}
 .prices-container div.price-card:nth-child(4)
 {
     width:330px;
@@ -2337,6 +2423,8 @@ width:320px;
 {
  width:300px;
 }
+
+
 
 }
 
