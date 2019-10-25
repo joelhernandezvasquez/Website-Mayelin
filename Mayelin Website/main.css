@@ -2279,5 +2279,64 @@ font-size: 1.5rem;
 }
 
 
+ /* ***************************** SERVICIOS ************************************ */
+ .wrapper-servicios
+{
+    
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 800px auto  auto  auto  auto 700px auto;
+    grid-template-areas: 
+    "header-servicios header-servicios header-servicios"
+    "servicios-info servicios-info servicios-info"
+    "servicios-features servicios-features servicios-features"
+    "prices-container prices-container prices-container"
+    "contact-container-services contact-container-services contact-container-services"
+    "testimony-servicios testimony-servicios testimony-servicios"
+    "footer footer footer";
+}
+
+#intro-message
+{
+    margin-top:200px;
+}
+
+.servicios-features
+{
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    row-gap:10px;
+    
+}
+
+.services-card
+{
+width:320px;
+ height:320px;  
+}
+.prices-container
+{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px auto;
+    grid-template-areas:
+    "prices-container-header prices-container-header prices-container-header"
+    "price-card-A price-card-B price-card-C";
+    row-gap:10px;
+   
+    
+}
+.prices-container div.price-card:nth-child(4)
+{
+    width:330px;
+}
+.prices-container div.price-card:nth-child(4) div.price-card-header
+{
+    width:330px;
+    height:250px;
+}
+
+.prices-card
+{
+ width:300px;
+}
+
 }
 

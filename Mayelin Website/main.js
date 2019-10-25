@@ -268,7 +268,7 @@ function movePreviousSlide()
 function loadTestimonyCarrousel()
 {
   const slides = Array.from(document.querySelectorAll(".testimony-slide"));
-  const slideWidth = slides[0].getBoundingClientRect().width + 60;
+  const slideWidth = slides[0].getBoundingClientRect().width + 80;
   
   slides.forEach((slide,index)=>
   {
