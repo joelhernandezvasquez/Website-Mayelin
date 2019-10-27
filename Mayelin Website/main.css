@@ -561,6 +561,15 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
     margin-top:20px;
 }
 
+.products-container a
+{
+    padding:5px;
+    text-decoration: none;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:20px;
+}
+
 /* GALLERY CONTAINER */
 
 .gallery-container
