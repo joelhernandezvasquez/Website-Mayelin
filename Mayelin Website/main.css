@@ -1527,7 +1527,7 @@ justify-content: space-around;
     height:100vh;
     display:grid;
     grid-template-columns:1fr;
-    grid-template-rows:450px 700px 320px;
+    grid-template-rows:450px auto 350px;
     grid-template-areas: 
     "header-products"
     "products-container-features"
@@ -1548,7 +1548,8 @@ justify-content: space-around;
     grid-area:products-container-features;
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(320px,1fr)) ;
-    border:1px solid red;
+    /* border:1px solid red; */
+    margin-top:20px;
 }
 
 .card-products
@@ -1558,28 +1559,50 @@ justify-content: space-around;
     grid-template-areas:
     "card-products-header"
     "card-products-body";
-    width:320px;
-    height:400px;
-    border:1px solid blue;
+    width:325px;
+    height:500px;
     margin-left:auto;
     margin-right: auto;
+    box-shadow: 0 15px 30px -7px rgba(0,0,0,.8);
+    transition:transform 0.5s,border 0.3s;
+    margin-bottom:40px;
 
+}
+.card-products:hover
+{
+    transform:scale(1.1);
+    border:2px solid var(--primary-background-color);
+    
 }
 
 .card-products-header
 {
     grid-area:card-products-header;
-    border:1px solid silver;
+  
+    
 }
 .card-products-body
 {
     grid-area:card-products-body;
-    background:gold;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
 }
 
 .card-products-header img
 {
     max-width: 100%;
+    margin-top:5px;
+}
+
+.card-products-body h1
+{
+    font-family: var(--primary-font);
+    color:var(--primary-background-color);
+    margin-top:0px;
+    margin-bottom: 0px;
 }
 
 
@@ -2020,7 +2043,18 @@ font-size: 1.4rem;
     font-size: 2.2rem;
 }
 
-
+/* ********************************** PRODUCTOS SECTION********************************* */
+.wrapper-products
+{
+    
+    grid-template-columns:1fr;
+    grid-template-rows:750px auto 350px;
+    grid-template-areas: 
+    "header-products"
+    "products-container-features"
+    "footer";
+   
+}
 }
 
 @media(min-width:799px)
@@ -2424,6 +2458,15 @@ width:320px;
  width:300px;
 }
 
+
+.card-products
+{
+  
+    width:300px;
+    height:500px;
+   
+
+}
 
 
 }
