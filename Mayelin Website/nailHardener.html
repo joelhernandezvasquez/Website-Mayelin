@@ -13,9 +13,36 @@
 
     <div class="wrapper-product-pages">
       
-        <div class="header-product-pages">
+       <div class="header-product-pages">
          
-            <h1> Nail Hardener</h1>
+            
+        <div class="hamburger-icon-container">
+            
+            <div class="bar1"> </div>
+            <div class="bar2"> </div>
+            <div class="bar3"> </div>
+    </div>
+
+    <img src="img/logo.jpg" alt="No image" id="logo-brand">
+
+      <div class="intro-heading-products">
+          <h1> Nail Hardener</h1>
+          <h3>Endurecedor de uñas</h3>
+      </div>
+        
+      <div class="menu-bar">
+        
+        <ul>
+           <li> <a href="index.html"> Home </a></li> 
+           <li> <a href="aboutUs.html"> Sobre Nosotros </a></li> 
+           <li> <a href="servicios.html"> Servicios </a> </li> 
+           <li> <a href="products.html"> Productos </a></li> 
+           <li> <a href="#"> Galleria </a></li> 
+           <li> <a href="#"> Contacto </a></li>     
+        </ul>
+    </div>
+           
+         
         </div>
 
         <div class="body-product-pages">
@@ -26,14 +53,13 @@
 
              <div class="image-product-info">
               
-                <h1 class="">Nail Hardener</h1>
-                <h3>$250</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Suspendisse varius enim in eros elementum tristique. 
-                    Duis cursus, mi quis viverra ornare, eros dolor interdum nulla,
-                    ut commodo diam libero vitae erat. Aenean faucibus nibh et justo 
-                    cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique
-                     posuere.
+                <h1>Nail Hardener</h1>
+                <h2>$250.00</h2>
+                <p>It is a unique nail treatment formulated to strengthen and repair thin brittle nails. 
+                    This product can be applied like a base coat, before you apply nail polish. 
+                    Quimica Alemana utilizes a highly concentrated formula for repairing nails and should only be applied in a thin coat,
+                     no more than once per week. This extraordinary treatment will make your nails visibly healthier and stronger
+                      in as little as 1 to 3 weeks of use!.
                 </p>
 
              </div>
@@ -47,7 +73,18 @@
                   <input type="image" src="img/5d3c514c73102c6852bf613d_iconfinder_instagram_1632517.png" class="media-icon">
                   <input type="image" src="img/5d3c51aa73102c7504bf61ae_iconfinder_messenger_3069715.png" class="media-icon">
         </div>
+        <p> © 2019 All rights reserved. Design by Joel Hernandez</p>
 
     </div>
+
+    <script>
+   const menuBar = document.querySelector(".menu-bar");
+const menuIcon = document.querySelector(".hamburger-icon-container");
+
+menuBar.addEventListener("mouseover",hoverMenuItems);
+menuBar.addEventListener("mouseout",hoverOutMenuItems);
+menuBar.addEventListener("mouseover",hoverLinks);
+menuIcon.addEventListener("click",openMenuBar);
+    </script>
 </body>
 </html>
