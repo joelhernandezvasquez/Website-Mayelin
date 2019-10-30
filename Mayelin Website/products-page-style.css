@@ -60,7 +60,7 @@
 
 .intro-heading-products
 {
-    width: 70%;
+    width: 90%;
     height:200px;
   
     margin:20px auto 0px auto;
@@ -72,7 +72,7 @@
 
 .intro-heading-products h1
 {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     font-family: var(--secondary-font);
     color:var(--primary-color);
     margin-bottom: 0px;
