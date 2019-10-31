@@ -1614,9 +1614,39 @@ justify-content: space-around;
     margin-bottom: 0px;
 }
 
+/* 
+************************************** GALLERY SECTION ************************************************************************************** */
+ 
+.wrapper-gallery
+{
+    height:100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:450px auto 350px;
+    grid-template-areas:
+    "header-gallery"
+    "gallery-images-container"
+    "footer";
+}
+
+.header-gallery
+{
+    grid-area:header-gallery;
+    background:linear-gradient(to bottom right,#e75aa1,transparent 120% ),url("img/71576020_2624871190889531_5785451935624593408_n.jpg"),no-repeat;
+    background-size:cover;
 
 
-
+}
+.gallery-images-container
+{
+    grid-area:gallery-images-container;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  
+}
+.gallery-images-container .image-cards
+{
+  margin-top:20px;
+}
 
 
 @media(min-width:359px)

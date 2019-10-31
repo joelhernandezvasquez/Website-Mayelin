@@ -108,6 +108,8 @@ function selectGalleryImage(e)
     {
       const currentSlide = slidesArray[0];
       currentSlide.classList.add("slide-selected");
+      //alert(position);
+      
       const position = slideWidth * 0;
 
       const galleryDotImage = document.querySelector("#first-gallery-image");
@@ -129,6 +131,7 @@ function selectGalleryImage(e)
        galleryDotImage.children[0].style.opacity = "1";
        galleryDotImage.classList.add("current-image-selected");
 
+       alert(position);
        track.style.transform = `translateX(-${position})`
        
 
@@ -138,9 +141,12 @@ function selectGalleryImage(e)
       const currentSlide = slidesArray[2];
       currentSlide.classList.add("slide-selected");
       const position = slideWidth * 2 + "px";
+
       const galleryDotImage = document.querySelector("#third-gallery-image");
       galleryDotImage.children[0].style.opacity = "1";
       galleryDotImage.classList.add("current-image-selected");
+      
+      alert(position);
 
       track.style.transform = `translateX(-${position})`
     }
@@ -153,6 +159,8 @@ function selectGalleryImage(e)
       galleryDotImage.children[0].style.opacity = "1";
       
       galleryDotImage.classList.add("current-image-selected");
+
+      alert(position);
        track.style.transform = `translateX(-${position})`
     }
     else if(ImageCardSelected==="5")
@@ -163,6 +171,7 @@ function selectGalleryImage(e)
       const galleryDotImage = document.querySelector("#fifth-gallery-image");
       galleryDotImage.children[0].style.opacity = "1";
       galleryDotImage.classList.add("current-image-selected");
+      alert(position);
        track.style.transform = `translateX(-${position})`
     }
     else if(ImageCardSelected==="6")
@@ -173,6 +182,8 @@ function selectGalleryImage(e)
       const galleryDotImage = document.querySelector("#sixth-gallery-image");
       galleryDotImage.children[0].style.opacity = "1";
       galleryDotImage.classList.add("current-image-selected");
+
+      alert(position);
        track.style.transform = `translateX(-${position})`
        const nextButton = document.querySelector(".right");
        nextButton.style.display = "none";
