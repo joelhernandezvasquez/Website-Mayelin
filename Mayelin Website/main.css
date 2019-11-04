@@ -1622,11 +1622,12 @@ justify-content: space-around;
     height:100vh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows:450px auto 350px;
+    grid-template-rows:450px auto 360px;
     grid-template-areas:
     "header-gallery"
     "gallery-images-container"
     "footer";
+    grid-gap:20px;
 }
 
 .header-gallery
@@ -1640,13 +1641,32 @@ justify-content: space-around;
 .gallery-images-container
 {
     grid-area:gallery-images-container;
+    display:grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  
   
 }
 .gallery-images-container .image-cards
 {
   margin-top:20px;
 }
+
+.carrousel-gallery
+{
+    position:relative;
+    width:95%;
+    height:450px;
+    margin:100px 5px 0px 5px;
+    display:grid;
+    grid-template-columns:0.2fr 2fr 0.2fr;
+    grid-template-rows:350px;
+    grid-template-areas:
+    "left-arrow-gallery track-container-gallery right-arrow-gallery";
+    
+   
+}
+
+
 
 
 @media(min-width:359px)
@@ -1665,6 +1685,18 @@ justify-content: space-around;
 {
    height:250px;
     
+}
+
+.gallery-images-container .image-cards
+{
+   width: 340px;
+   height:340px;
+ 
+} 
+
+.gallery-images-container .image-cards
+{
+  margin-top:30px;
 }
 
 }
@@ -1686,6 +1718,13 @@ justify-content: space-around;
  width:380px;
  
 }
+
+.gallery-images-container .image-cards
+{
+   width: 370px;
+   height:370px;
+ 
+} 
 
 
 }
@@ -2094,6 +2133,31 @@ font-size: 1.4rem;
     "footer";
    
 }
+
+
+/* ******************************************GALLERY SECTION ************************************************************************** */
+
+.wrapper-gallery
+{
+    grid-template-columns: 1fr;
+    grid-template-rows:650px auto 360px;
+}
+
+.gallery-images-container .image-cards
+{
+   width: 350px;
+   height:350px;
+ 
+} 
+.carrousel-gallery
+{
+height:750px;
+grid-template-columns:0.2fr 2.2fr 0.2fr;
+grid-template-rows:600px;
+
+ 
+}
+
 }
 
 @media(min-width:799px)
@@ -2102,6 +2166,8 @@ font-size: 1.4rem;
     {
      background-position-y:33%;
     }
+
+    
 
 
 
@@ -2505,6 +2571,26 @@ width:320px;
     height:500px;
    
 
+}
+
+.wrapper-gallery
+{
+  
+    grid-template-rows:750px auto 360px;
+}
+
+.gallery-images-container .image-cards
+{
+   width: 320px;
+   height:320px;
+ 
+} 
+.carrousel-gallery
+{
+height:850px;
+grid-template-rows:700px;
+
+ 
 }
 
 

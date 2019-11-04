@@ -108,7 +108,7 @@ function selectGalleryImage(e)
     {
       const currentSlide = slidesArray[0];
       currentSlide.classList.add("slide-selected");
-      //alert(position);
+     
       
       const position = slideWidth * 0;
 
@@ -131,7 +131,7 @@ function selectGalleryImage(e)
        galleryDotImage.children[0].style.opacity = "1";
        galleryDotImage.classList.add("current-image-selected");
 
-       alert(position);
+     
        track.style.transform = `translateX(-${position})`
        
 
@@ -146,7 +146,7 @@ function selectGalleryImage(e)
       galleryDotImage.children[0].style.opacity = "1";
       galleryDotImage.classList.add("current-image-selected");
       
-      alert(position);
+    
 
       track.style.transform = `translateX(-${position})`
     }
@@ -160,7 +160,7 @@ function selectGalleryImage(e)
       
       galleryDotImage.classList.add("current-image-selected");
 
-      alert(position);
+      
        track.style.transform = `translateX(-${position})`
     }
     else if(ImageCardSelected==="5")
@@ -171,7 +171,7 @@ function selectGalleryImage(e)
       const galleryDotImage = document.querySelector("#fifth-gallery-image");
       galleryDotImage.children[0].style.opacity = "1";
       galleryDotImage.classList.add("current-image-selected");
-      alert(position);
+      
        track.style.transform = `translateX(-${position})`
     }
     else if(ImageCardSelected==="6")
@@ -183,7 +183,7 @@ function selectGalleryImage(e)
       galleryDotImage.children[0].style.opacity = "1";
       galleryDotImage.classList.add("current-image-selected");
 
-      alert(position);
+     
        track.style.transform = `translateX(-${position})`
        const nextButton = document.querySelector(".right");
        nextButton.style.display = "none";
@@ -205,7 +205,7 @@ function closeGallery(e)
 function runSlideShow()
 {
   const slides = Array.from(document.querySelectorAll(".slide"));
-  const slideWidth = slides[0].getBoundingClientRect().width + 2600;
+  const slideWidth = slides[0].getBoundingClientRect().width + 200;
   
   slides.forEach((slide,index)=>
   {
@@ -567,5 +567,196 @@ function closeVideo()
 {
   const videoModalBox = document.querySelector(".video-modal-box");
   videoModalBox.classList.remove("open-video-modal");
+}
+
+
+ function openSlideShowGallery(e)
+{
+  const gallerySlideShow = document.querySelector(".gallery-slide-show");
+
+  if(e.target.closest("img"))
+  {
+    gallerySlideShow.classList.add("open");
+    
+    chooseGalleryImage(e);
+    runSlideShow();
+  }
+}
+
+function chooseGalleryImage(e)
+{
+  const ImageCardSelected = e.target.parentElement.parentElement.dataset.image;
+    const slidesArray = Array.from(document.querySelectorAll(".slide"));
+    const slideWidth = slidesArray[0].getBoundingClientRect().width + 200;
+    const track = document.querySelector(".track-container-gallery");
+
+   if(ImageCardSelected==="1")
+    {
+      const currentSlide = slidesArray[0];
+      currentSlide.classList.add("slide-selected");
+     
+      
+      const position = slideWidth * 0;
+
+      const previousButton = document.querySelector(".left");
+      previousButton.style.display = "none";
+ 
+    
+    }
+   else if(ImageCardSelected==="2")
+   {
+       const currentSlide = slidesArray[1];
+       currentSlide.classList.add("slide-selected");
+       const position = slideWidth * 1 + "px";
+       track.style.transform = `translateX(-${position})`
+       
+
+     }
+    else if(ImageCardSelected==="3")
+    {
+      const currentSlide = slidesArray[2];
+      currentSlide.classList.add("slide-selected");
+      const position = slideWidth * 2 + "px";
+
+      track.style.transform = `translateX(-${position})`
+    }
+    else if(ImageCardSelected==="4")
+    {
+      const currentSlide = slidesArray[3];
+      currentSlide.classList.add("slide-selected");
+      const position = slideWidth * 3 + "px";
+      
+       track.style.transform = `translateX(-${position})`
+    }
+    else if(ImageCardSelected==="5")
+    {
+      const currentSlide = slidesArray[4];
+      currentSlide.classList.add("slide-selected");
+      const position = slideWidth * 4 + "px";
+      
+       track.style.transform = `translateX(-${position})`
+    }
+    else if(ImageCardSelected==="6")
+    {
+      const currentSlide = slidesArray[5];
+      currentSlide.classList.add("slide-selected");
+      const position = slideWidth * 5 + "px";
+       track.style.transform = `translateX(-${position})`
+    
+    }
+
+    else if(ImageCardSelected==="7")
+    {
+      const currentSlide = slidesArray[6];
+      currentSlide.classList.add("slide-selected");
+      const position = slideWidth * 6 + "px";
+       track.style.transform = `translateX(-${position})`
+    
+    }
+
+    else if(ImageCardSelected==="8")
+    {
+      const currentSlide = slidesArray[7];
+      currentSlide.classList.add("slide-selected");
+      const position = slideWidth * 7 + "px";
+       track.style.transform = `translateX(-${position})`
+    
+    }
+    else if(ImageCardSelected==="9")
+    {
+      const currentSlide = slidesArray[8];
+      currentSlide.classList.add("slide-selected");
+      const position = slideWidth * 8 + "px";
+       track.style.transform = `translateX(-${position})`
+    }
+
+    else if(ImageCardSelected==="10")
+    {
+      const currentSlide = slidesArray[9];
+      currentSlide.classList.add("slide-selected");
+      const position = slideWidth * 9 + "px";
+       track.style.transform = `translateX(-${position})`
+    }
+
+    else if(ImageCardSelected==="11")
+    {
+      const currentSlide = slidesArray[10];
+      currentSlide.classList.add("slide-selected");
+      const position = slideWidth * 10 + "px";
+       track.style.transform = `translateX(-${position})`
+    }
+
+    else if(ImageCardSelected==="12")
+    {
+      const currentSlide = slidesArray[11];
+      currentSlide.classList.add("slide-selected");
+      const position = slideWidth * 11 + "px";
+       track.style.transform = `translateX(-${position})`
+    }
+
+    else if(ImageCardSelected==="13")
+    {
+      const currentSlide = slidesArray[12];
+      currentSlide.classList.add("slide-selected");
+      const position = slideWidth * 12 + "px";
+       track.style.transform = `translateX(-${position})`
+    }
+
+    else if(ImageCardSelected==="14")
+    {
+      const currentSlide = slidesArray[13];
+      currentSlide.classList.add("slide-selected");
+      const position = slideWidth * 13 + "px";
+       track.style.transform = `translateX(-${position})`
+    }
+
+    else if(ImageCardSelected==="15")
+    {
+      const currentSlide = slidesArray[14];
+      currentSlide.classList.add("slide-selected");
+      const position = slideWidth * 14 + "px";
+       track.style.transform = `translateX(-${position})`
+    }
+
+    else if(ImageCardSelected==="16")
+    {
+      const currentSlide = slidesArray[15];
+      currentSlide.classList.add("slide-selected");
+      const position = slideWidth * 15 + "px";
+       track.style.transform = `translateX(-${position})`
+    }
+
+    else if(ImageCardSelected==="17")
+    {
+      const currentSlide = slidesArray[16];
+      currentSlide.classList.add("slide-selected");
+      const position = slideWidth * 16 + "px";
+       track.style.transform = `translateX(-${position})`
+    }
+
+    else if(ImageCardSelected==="18")
+    {
+      const currentSlide = slidesArray[17];
+      currentSlide.classList.add("slide-selected");
+      const position = slideWidth * 17 + "px";
+       track.style.transform = `translateX(-${position})`
+    }
+
+    else if(ImageCardSelected==="19")
+    {
+      const currentSlide = slidesArray[18];
+      currentSlide.classList.add("slide-selected");
+      const position = slideWidth * 18 + "px";
+       track.style.transform = `translateX(-${position})`
+    }
+
+    else if(ImageCardSelected==="20")
+    {
+      const currentSlide = slidesArray[19];
+      currentSlide.classList.add("slide-selected");
+      const position = slideWidth * 19 + "px";
+       track.style.transform = `translateX(-${position})`
+    }
+ 
 }
 
