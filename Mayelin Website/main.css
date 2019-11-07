@@ -128,7 +128,9 @@
 .header
 {
     grid-area:header;
-    background:linear-gradient(to bottom left,#e75aa1,transparent 140% ),url("img/background.jpg"),no-repeat;
+    background:linear-gradient(to bottom left,#e75aa1,transparent 140% ),url("img/5d31b6bd90eed36321cbd139_RWZO1827.png"),no-repeat;
+ 
+  
    background-size:cover;
    background-position-y:15%;
 
@@ -456,7 +458,7 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
 }
 .service-card-header img
 {
-  max-width: 100%;
+  max-width:100%;
 }
 .service-card-body
 {
