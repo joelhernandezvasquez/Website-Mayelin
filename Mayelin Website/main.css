@@ -229,7 +229,7 @@
     position:absolute;
     z-index:2;
     margin-top:70px;
-    transform:translateX(410px);
+    transform:translateX(610px);
     transition:transform 0.5s;
 }
 
@@ -1341,13 +1341,13 @@ justify-content: space-around;
 }
 #pedicure
 {
-    background:linear-gradient(to bottom left,#e75aa1,transparent 100% ),url("img/JDUY1480.jpg"),no-repeat;
+    background:linear-gradient(to bottom left,#e75aa1,transparent 100% ),url("img/JDUY1480.png"),no-repeat;
     background-size:cover; 
 }
 
 #drinks
 {
-    background:linear-gradient(to bottom left,#e75aa1,transparent 100% ),url("img/KHZE7597.jpg"),no-repeat;
+    background:linear-gradient(to bottom left,#e75aa1,transparent 100% ),url("img/KHZE7597.png"),no-repeat;
     background-size:cover;  
 }
 .wrapper-servicios
@@ -1485,7 +1485,7 @@ justify-content: space-around;
 
 #drink-bg
 {
-    background:linear-gradient(to bottom left,#e75aa1,transparent 120% ),url("img/WEUX3015.jpg"),no-repeat;
+    background:linear-gradient(to bottom left,#e75aa1,transparent 120% ),url("img/WEUX3015.png"),no-repeat;
     background-size:cover;
 }
 .price-card-header
