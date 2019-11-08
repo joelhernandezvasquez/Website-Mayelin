@@ -228,9 +228,10 @@
     background:white;
     position:absolute;
     z-index:2;
-    margin-top:70px;
-    transform:translateX(610px);
-    transition:transform 0.5s;
+    margin:70px auto 0px 15px;
+    transform:translateY(-910px);
+    transition:transform 0.7s;
+   
 }
 
 .form
@@ -238,6 +239,10 @@
     display: flex;
     flex-direction: column;
     margin:60px auto 0px auto;  
+}
+.form h2
+{
+    color:var(--primary-background-color);
 }
 
 #close-icon
@@ -309,7 +314,8 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
 
 .openAppointmentForm.appointment-container
 {
-    transform: translateX(10px);
+    transform: translateY(20px);
+   
 }
 
 
@@ -470,10 +476,6 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
     
 
 }
-.service-card-body
-{
-   
-}
 
 .service-card-body h2
 {
@@ -490,7 +492,11 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
     background:white;
     color:var(--primary-background-color);
 }
-
+.service-card-body button a
+{
+    text-decoration: none;
+    color:var(--primary-background-color);
+}
 
 
 /* PRODUCTS CONTAINER  */
@@ -1025,7 +1031,7 @@ grid-template-areas:
 }
 #address-icon
 {
-    width:100px;
+    width:60px;
     padding:15px;
 }
 .icon
