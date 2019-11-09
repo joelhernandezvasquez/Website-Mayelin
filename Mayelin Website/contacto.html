@@ -1,0 +1,106 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+     <link href="main.css" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet"> 
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  
+      <script src="main.js"> </script>
+
+</head>
+
+<body>
+
+    <div class="wrapper-contact">
+
+        <div class="header-contact">
+         
+            <div class="hamburger-icon-container">
+            
+                <div class="bar1"> </div>
+                <div class="bar2"> </div>
+                <div class="bar3"> </div>
+        </div>
+        <img src="img/logo.jpg" alt="No image" id="logo-brand">
+
+        <div id="intro-message">
+            <h1 class="font-style">Contacto</h1>
+        </div>
+
+        </div>
+
+        <div class="menu-bar">
+        
+            <ul>
+               <li> <a href="index.html"> Home </a></li> 
+               <li> <a href="aboutUs.html"> Sobre Nosotros </a></li> 
+               <li> <a href="servicios.html"> Servicios </a> </li> 
+               <li> <a href="products.html"> Productos </a></li> 
+               <li> <a href="gallery.html"> Galleria </a></li> 
+               <li> <a href="#"> Contacto </a></li>     
+            </ul>
+        </div>
+
+        <div class="container-contact">
+
+             <div class="card-contact">
+                 <div class="card-contact-header">
+                  
+                    <img src="img/iconfinder_00-ELASTOFONT-STORE-READY_phone-call_2703068.svg">
+                 <h1> PHONE</h1>
+                </div>
+
+                 <div class="card-contact-body">
+                 <h2> + 1 (809) 447 9942</h2>
+                 <h2> + 1 (809) 447 8942</h2>
+                 </div>
+             </div>
+
+             <div class="card-contact">
+                <div class="card-contact-header">
+                 
+                   <img src="img/iconfinder_Artboard_9_3915320.svg">
+                <h1> LOCATION</h1>
+               </div>
+
+                <div class="card-contact-body">
+                <h2>Calle Regino Camilo #7 Tenares  Republica Dominicana</h2>
+                </div>
+            </div>
+
+            <div class="card-contact">
+                <div class="card-contact-header">
+                 
+                   <img src="img/iconfinder_mail_115714.svg">
+                <h1> Email</h1>
+               </div>
+
+                <div class="card-contact-body">
+                <h2>Mayelinnail@gmail.com</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.8574491036106!2d-70.35349824981627!3d19.37532414746675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eae28d8fbfb031f%3A0x54ec362bdd44c8cd!2sMayelin%20Nails%20And%20Bar!5e0!3m2!1sen!2sus!4v1567265523075!5m2!1sen!2sus" width="400" height="250" frameborder="0" style="border:0;" allowfullscreen="" class="map"></iframe>
+        </div>
+
+        <div class="footer">
+
+        </div>
+    </div>
+
+    <script>
+     const menuBar = document.querySelector(".menu-bar");
+const menuIcon = document.querySelector(".hamburger-icon-container");
+
+
+menuBar.addEventListener("mouseover",hoverMenuItems);
+menuBar.addEventListener("mouseout",hoverOutMenuItems);
+menuBar.addEventListener("mouseover",hoverLinks);
+menuIcon.addEventListener("click",openMenuBar);
+    </script>
+</body>
+</html>
