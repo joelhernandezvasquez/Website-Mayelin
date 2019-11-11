@@ -1674,13 +1674,16 @@ justify-content: space-around;
    
 }
 /* *************************************CONTACT SECTION **************************** */
-
+.body-contact
+{
+background:rgba(229, 230, 232, 0.76); 
+}
 .wrapper-contact
 {
     height:100vh;
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 400px  auto repeat(2,500px);
+    grid-template-rows: 400px  auto  auto repeat(1,500px);
     grid-gap:20px;
     grid-template-areas:
     "header-contact"
@@ -1762,6 +1765,87 @@ justify-content: space-around;
     color:var(--primary-background-color);
     font-size: 1.3rem;
     padding:5px;
+}
+
+.form-contact
+{
+    width:95%;
+    height:auto;
+    background:#FAFAFA;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:20px;
+    display:flex;
+    flex-direction: column;
+}
+.form-contact h2
+{
+    color:black;
+    text-align: left;
+    font-size: 2rem;
+    font-family: var(--secondary-font);
+   padding:20px;
+
+}
+.form-contact label
+{
+    font-family: var(--secondary-font);
+}
+.form-contact input[type="text"]
+{
+    width:90%;
+    border:2px solid #aaa;
+    border-radius: 4px;
+    outline:none;
+    box-sizing: border-box;
+    transition:0.3s;
+    margin:0px;
+}
+
+.input-container
+{
+    width:95%;
+    position: relative;
+    /* border:1px solid red; */
+    display:flex;
+    padding:10px;
+   
+}
+.input-container input[type="text"]
+{
+    padding-left:40px;
+}
+.input-container input[type="text"]:focus
+{
+    border-color:var(--primary-background-color);
+    box-shadow: 0 0 8px 0 var(--primary-background-color);
+}
+.input-container i
+{
+    position: absolute;
+    left:0;
+    top:13px;
+    padding:10px;
+    left:10px;
+    color:#aaa;
+    transition:0.3s;
+}
+.input-container input[type="text"]:focus + i
+{
+    color:var(--primary-background-color);
+}
+.form-contact textarea
+{
+  height:150px;
+}
+.form-contact button
+{
+    padding:20px 40px;
+    background:var(--primary-background-color);
+    color:white;
+    font-size: 1.2rem;
+    font-family: var(--primary-font);
+    border:none;
 }
 
 
