@@ -111,10 +111,11 @@
     height:100vh;
     display:grid;
     grid-template-columns:1fr;
-    grid-template-rows: 450px  auto auto 1600px  2200px 2200px  750px 580px 500px 340px;
+    grid-template-rows: 450px  auto auto auto 1600px  2200px 2200px  750px 580px 500px 340px;
     row-gap:20px;
    grid-template-areas: 
     "header"
+    "aniversary-info-container"
     "aniversary-container"
     "about-us"
     "services-container"
@@ -322,10 +323,31 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
 
 /* END APPOINTMENT CONTAINER */
 
+.aniversary-info-container
+{
+    grid-area:aniversary-info-container;
+    margin-bottom: 10px;
+}
+
+.aniversary-info-container h2
+{
+    text-align: center;
+    font-family: var(--primary-font);
+    font-size: 2rem;
+    margin:10px 0px 10px 0px;  
+}
+
+.aniversary-info-container p
+{
+    font-size: 16px;
+    font-family: var(--secondary-font);
+    line-height: 1.5;
+    margin-left:10px;
+}
 .aniversary-container
 {
     grid-area:aniversary-container;
-    border:1px solid red;
+    
 }
 
 
@@ -336,7 +358,8 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
   margin-left:auto;
   margin-right:auto;
   margin-bottom: 20px;
-  border:1px solid blue;
+ 
+ 
 }
 
 .portrait img
@@ -352,7 +375,8 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
     margin-left:auto;
     margin-right:auto;
     margin-bottom: 20px;
-    border:1px solid blue;
+   
+    
 }
 .landscape img
 {
@@ -367,7 +391,7 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
     margin-left:auto;
     margin-right:auto;
     margin-bottom: 20px;
-    border:1px solid blue;
+   
 }
 
 .square img
@@ -383,13 +407,147 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus
     margin-left:auto;
     margin-right:auto;
     margin-bottom: 20px;
-    border:1px solid blue;  
+     
 }
 .custom img
 {
     max-width:100%;
     max-height:100%;
 }
+
+
+
+
+.aniversary-container div:nth-child(9) 
+{
+   height: 300px;
+}
+.aniversary-container div:nth-child(9) img
+{
+   height: 300px;
+}
+
+.aniversary-container div:nth-child(15) 
+{
+   height: 420px;
+}
+.aniversary-container div:nth-child(15) img
+{
+   height: 420px;
+}
+
+
+.aniversary-container div:nth-child(32) 
+{
+   height: 234px;
+}
+
+.aniversary-container div:nth-child(47) 
+{
+   height: 234px;
+   
+}
+.aniversary-container div:nth-child(57) 
+{
+   height: 234px;
+   
+}
+
+.aniversary-container div:nth-child(78) 
+{
+   height: 390px;
+   
+}
+
+.aniversary-container div:nth-child(80) 
+{
+   height: 380px; 
+}
+
+.aniversary-container div:nth-child(80) img
+{
+   width:100%;  
+}
+
+.aniversary-container div:nth-child(82) 
+{
+   height: 400px;
+   
+}
+
+.aniversary-container div:nth-child(82) img 
+{
+   width:100%;
+   
+}
+.aniversary-container div:nth-child(86) img
+{
+   width:120%;
+   
+}
+
+.aniversary-container div:nth-child(87) img
+{
+   width:120%;
+   
+}
+
+.aniversary-container div:nth-child(88)
+{
+height: 420px;
+   
+}
+.aniversary-container div:nth-child(88) img
+{
+ width: 350px;
+   
+}
+
+.aniversary-container div:nth-child(89)
+{
+height: 420px;
+   
+}
+.aniversary-container div:nth-child(89) img
+{
+ width: 350px;
+   
+}
+
+.aniversary-container div:nth-child(91)
+{
+height: 340px;
+   
+}
+
+.aniversary-container div:nth-child(91) img
+{
+width: 100%;
+   
+}
+
+
+.contenedor-imagen
+{
+    
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0, .9);
+    display:none;
+    z-index:3;
+    position:fixed;
+    top:0;
+
+}
+
+.open-imagenes.contenedor-imagen
+{
+    display:block;
+    
+}
+
+
+
 
 
 .about-us

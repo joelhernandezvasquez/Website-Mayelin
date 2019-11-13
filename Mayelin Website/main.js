@@ -760,3 +760,745 @@ function chooseGalleryImage(e)
  
 }
 
+function openAniversaryImages(e)
+{
+  const container = document.querySelector(".contenedor-imagen");
+  container.classList.add("open-imagenes");
+
+  selectAniversaryImage(e);
+}
+
+function closeIconGalleryAniversary(e)
+{
+  const container = document.querySelector(".contenedor-imagen");
+  container.classList.remove("open-imagenes");
+  location.reload();
+
+
+}
+
+function selectAniversaryImage(e)
+{
+  const divNode = e.target.dataset.photo;
+  const imageContainer = document.querySelector(".contenedor-imagen")
+  
+  const image = document.createElement("img");
+   image.style.marginTop ="10px";
+  
+  if(divNode==="1")
+  {
+    image.src="img/NGXH1449.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="2")
+  {
+    image.src="img/DGAC9540.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+  if(divNode==="3")
+  {
+    image.src="img/JSBQ2231.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+  if(divNode==="4")
+  {
+    image.src="img/MFXC8615.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+  if(divNode==="5")
+  {
+    image.src="img/SEXK2821.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+  if(divNode==="6")
+  {
+    image.src="img/EWRP6558.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+  if(divNode==="7")
+  {
+    image.src="img/WIHO4174.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+  if(divNode==="8")
+  {
+    image.src="img/EGXV9251.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+  if(divNode==="9")
+  {
+    image.src="img/CEHP0089.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+  if(divNode==="10")
+  {
+    image.src="img/KWUL5095.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+  if(divNode==="11")
+  {
+    image.src="img/GUTC0913.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+  
+  if(divNode==="12")
+  {
+    image.src="img/EPOJ3930.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+  if(divNode==="13")
+  {
+    image.src="img/ECRL3087.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+  if(divNode==="14")
+  {
+    image.src="img/EREZ4554.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+  if(divNode==="15")
+  {
+    image.src="img/VCRC1108.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+  if(divNode==="16")
+  {
+    image.src="img/OICQ1587.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="17")
+  {
+    image.src="img/DHWQ8087.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="18")
+  {
+    image.src="img/JVVL7637.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+  if(divNode==="19")
+  {
+    image.src="img/MZHM5292.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+  if(divNode==="20")
+  {
+    image.src="img/WNKO8082.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="21")
+  {
+    image.src="img/WIVE4510.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="22")
+  {
+    image.src="img/VYMG0711.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="23")
+  {
+    image.src="img/IUVY7387.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="24")
+  {
+    image.src="img/GCAB1632.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="25")
+  {
+    image.src="img/NUPM8491.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="26")
+  {
+    image.src="img/HMVM4825.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="27")
+  {
+    image.src="img/DGAC9540.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="28")
+  {
+    image.src="img/DLOV7127.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="29")
+  {
+    image.src="img/IZKF1570.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="30")
+  {
+    image.src="img/IYRR0513.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="31")
+  {
+    image.src="img/TNMX6204.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="32")
+  {
+    image.src="img/NXBQ7424.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="33")
+  {
+    image.src="img/FFXC2240.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="34")
+  {
+    image.src="img/TJCG9321.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="35")
+  {
+    image.src="img/RJGK4296.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="36")
+  {
+    image.src="img/JAMA1519.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="37")
+  {
+    image.src="img/ETVK0159.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="38")
+  {
+    image.src="img/GAHJ2965.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="39")
+  {
+    image.src="img/thumbnail_Image-8.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="40")
+  {
+    image.src="img/SLUH7000.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="41")
+  {
+    image.src="img/PVER3654.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="42")
+  {
+    image.src="img/QNDO0900.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="43")
+  {
+    image.src="img/LURX0720.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="44")
+  {
+    image.src="img/JUZY6674.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="45")
+  {
+    image.src="img/ANZM2657.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="46")
+  {
+    image.src="img/UWDX9045.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="47")
+  {
+    image.src="img/OERN3473.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="48")
+  {
+    image.src="img/DWWF8154.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="49")
+  {
+    image.src="img/DDHG8214.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="50")
+  {
+    image.src="img/XEVM7038.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="51")
+  {
+    image.src="img/COHX0041.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="52")
+  {
+    image.src="img/LAQW2922.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="53")
+  {
+    image.src="img/SUXI9311.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="54")
+  {
+    image.src="img/HLKK8783.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="55")
+  {
+    image.src="img/LTRQ5270.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="56")
+  {
+    image.src="img/VKYE5679.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="57")
+  {
+    image.src="img/UMKE4917.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="58")
+  {
+    image.src="img/WGJN9239.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="59")
+  {
+    image.src="img/NZUR0567.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="60")
+  {
+    image.src="img/FVSG4902.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="61")
+  {
+    image.src="img/SGFB5150.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="62")
+  {
+    image.src="img/HFZC4502.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="63")
+  {
+    image.src="img/OSYO5805.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="64")
+  {
+    image.src="img/thumbnail_Image-9.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="65")
+  {
+    image.src="img/UOSO8567.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="66")
+  {
+    image.src="img/PFFS6541.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="67")
+  {
+    image.src="img/JKRJ7444.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="68")
+  {
+    image.src="img/WUPY1854.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="69")
+  {
+    image.src="img/NUIA1978.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="70")
+  {
+    image.src="img/OCCR8195.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="71")
+  {
+    image.src="img/thumbnail_Image-10.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="72")
+  {
+    image.src="img/WJWW1141.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="73")
+  {
+    image.src="img/JMGX7322.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="74")
+  {
+    image.src="img/LECQ9448.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="75")
+  {
+    image.src="img/NRCR7849.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="76")
+  {
+    image.src="img/SOOF4632.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="77")
+  {
+    image.src="img/BSAM9560.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="78")
+  {
+    image.src="img/BGXB1616.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="79")
+  {
+    image.src="img/BKQM2189.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="80")
+  {
+    image.src="img/CRQE8185.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="81")
+  {
+    image.src="img/DOHP8532.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="82")
+  {
+    image.src="img/ECBL5455.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="83")
+  {
+    image.src="img/EIYL8756.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="84")
+  {
+    image.src="img/GRTJ1979.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="85")
+  {
+    image.src="img/JFTO9062.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="86")
+  {
+    image.src="img/MPZO0665.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="87")
+  {
+    image.src="img/NFBR1427.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="88")
+  {
+    image.src="img/OXJG2113.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="89")
+  {
+    image.src="img/TBZP7466.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="90")
+  {
+    image.src="img/TQLW0966.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+  if(divNode==="91")
+  {
+    image.src="img/WPWV0533.jpg";
+    image.classList.add("responsive-images");
+    imageContainer.appendChild(image);
+    return;
+  }
+
+
+  
+}
+
