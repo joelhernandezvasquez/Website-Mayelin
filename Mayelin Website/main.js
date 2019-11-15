@@ -1497,8 +1497,11 @@ function selectAniversaryImage(e)
     imageContainer.appendChild(image);
     return;
   }
+  
+}
 
-
+function sendContactForm(e)
+{
   
 }
 

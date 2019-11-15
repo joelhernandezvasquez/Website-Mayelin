@@ -50,7 +50,7 @@
              <div class="card-contact">
                  <div class="card-contact-header">
                   
-                    <img src="img/iconfinder_00-ELASTOFONT-STORE-READY_phone-call_2703068.svg">
+                    <img src="img/5d39adcfeeeaade6d90e6b55_iconfinder_viber_519179.png">
                  <h1> PHONE</h1>
                 </div>
 
@@ -64,7 +64,7 @@
              <div class="card-contact">
                 <div class="card-contact-header">
                  
-                   <img src="img/iconfinder_Artboard_9_3915320.svg">
+                   <img src="img/5d39adc2872e33b8cab6dfd4_iconfinder_simpline_18_2305591.png">
                 <h1> LOCATION</h1>
                </div>
 
@@ -76,7 +76,7 @@
             <div class="card-contact">
                 <div class="card-contact-header">
                  
-                   <img src="img/iconfinder_mail_115714.svg">
+                   <img src="img/5d39add9040fc866cbdfe7e2_iconfinder_simpline_42_2305620.png">
                 <h1> Email</h1>
                </div>
 
@@ -87,7 +87,7 @@
         </div>
 
         <div class="contact-form">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.8574491036106!2d-70.35349824981627!3d19.37532414746675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eae28d8fbfb031f%3A0x54ec362bdd44c8cd!2sMayelin%20Nails%20And%20Bar!5e0!3m2!1sen!2sus!4v1567265523075!5m2!1sen!2sus" width="400" height="250" frameborder="0" style="border:0;" allowfullscreen="" class="map"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.8574491036106!2d-70.35349824981627!3d19.37532414746675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eae28d8fbfb031f%3A0x54ec362bdd44c8cd!2sMayelin%20Nails%20And%20Bar!5e0!3m2!1sen!2sus!4v1567265523075!5m2!1sen!2sus" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" class="map"></iframe>
        
           <div class="form-contact">
             
@@ -112,7 +112,7 @@
            
            <textarea id="mensaje" placeholder="Envianos tu Mensaje"> </textarea>
 
-           <button type="submit" id="submit">Enviar Mensaje</button>
+           <button type="submit" id="submit" class="submit-contact-form">Enviar Mensaje</button>
 
             </form>
           </div>
@@ -120,19 +120,28 @@
         </div>
 
         <div class="footer">
-
+            <img src="img/logo.jpg" id="logo-brand-footer">
+         <h1> Mayelin Nails and Bar</h1>
+         <div class="social-media-container">
+         <a href="https://www.facebook.com/MayelinNailsAndBar/"><input type="image" src="img/5d3c501073102c99b6bf5efa_iconfinder_facebook_1632509.png" class="media-icon"> </a> 
+          <a href="https://www.instagram.com/accounts/login/?next=/explore/locations/1020043269/mayelin-nails-and-bar/"> <input type="image" src="img/5d3c514c73102c6852bf613d_iconfinder_instagram_1632517.png" class="media-icon"> </a>
+          <a href="https://m.me/XYZ"> <input type="image" src="img/5d3c51aa73102c7504bf61ae_iconfinder_messenger_3069715.png" class="media-icon"> </a>
+         </div>
+         <p> © 2019 All rights reserved. Design by Joel Hernandez</p>
         </div>
     </div>
 
     <script>
      const menuBar = document.querySelector(".menu-bar");
 const menuIcon = document.querySelector(".hamburger-icon-container");
+const submitForm = document.querySelector(".submit-contact-form");
 
 
 menuBar.addEventListener("mouseover",hoverMenuItems);
 menuBar.addEventListener("mouseout",hoverOutMenuItems);
 menuBar.addEventListener("mouseover",hoverLinks);
 menuIcon.addEventListener("click",openMenuBar);
+submitForm.addEventListener("click",sendContactForm);
     </script>
 </body>
 </html>
