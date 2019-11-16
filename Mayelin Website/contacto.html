@@ -41,7 +41,7 @@
                <li> <a href="servicios.html"> Servicios </a> </li> 
                <li> <a href="products.html"> Productos </a></li> 
                <li> <a href="gallery.html"> Galleria </a></li> 
-               <li> <a href="#"> Contacto </a></li>     
+               <li> <a href="contacto.html"> Contacto </a></li>     
             </ul>
         </div>
 
@@ -56,7 +56,7 @@
 
                  <div class="card-contact-body">
                  <h2> + 1 (809) 447 9942</h2>
-                 <h2> + 1 (809) 447 8942</h2>
+                 <!-- <h2> + 1 (809) 447 8942</h2> -->
                 
                  </div>
              </div>
@@ -97,16 +97,17 @@
             
                     <label for="name">Nombre:</label>
                     <div class="input-container">
-                    <input type="text" placeholder="Tu nombre">
-                    <i class="fas fa-user fa-lg fa-fw "></i> 
+                    <input type="text" placeholder="Tu nombre" id="contact-name">
+                    <i class="fas fa-user fa-lg fa-fw "></i>  
                 </div>
+                <p class="error-message" id="nameError"> *Por favor introdusca su nombre</p>
 
                 <label for="name">Email:</label>
                     <div class="input-container">
-                    <input type="text" placeholder="Email">
+                    <input type="text" placeholder="Email" id="contact-email">
                     <i class="far fa-envelope fa-lg fa-fw "></i>
-                    
                 </div>
+                <p class="error-message" id="emailError"> *Por favor introdusca su email</p>
 
            <label for="mensaje"> Mensaje: </label>
            

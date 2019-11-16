@@ -1502,6 +1502,34 @@ function selectAniversaryImage(e)
 
 function sendContactForm(e)
 {
+  const fullName = document.querySelector("#contact-name");
+  const emailInput = document.querySelector("#contact-email");
+  const nameErrorMessage = document.querySelector("#nameError");
+ const emailErrorMessage = document.querySelector("#emailError");
+
+ const name = fullName.value.trim();
+ const email = emailInput.value.trim();
+
+ if(!name)
+ {
+   
+  nameErrorMessage.style.display="block";
+   fullName.focus();
+   e.preventDefault();
+   return;
+ }
+
+ if(!email)
+ {
+   emailErrorMessage.style.display="block";
+   emailInput.focus();
+   e.preventDefault();
+   return;
+ }
+
+ 
+
+
   
 }
 
