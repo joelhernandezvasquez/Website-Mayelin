@@ -3,7 +3,7 @@ function hoverMenuItems(e)
 {
   if(e.target.closest("li"))
   {
-    link= e.target.firstElementChild;
+   const link= e.target.firstElementChild;
     link.style.color = "white";
   }
 }
@@ -12,7 +12,7 @@ function hoverOutMenuItems(e)
 {
   if(e.target.closest("li"))
  {
-   link= e.target.firstElementChild;
+   const link= e.target.firstElementChild;
    link.style.color = "#e75aa1";
  }
 }
@@ -22,6 +22,14 @@ function hoverLinks(e)
   if(e.target.closest("a"))
  {
    e.target.style.color = "white";
+ }
+}
+
+function hoverOutLinks(e)
+{
+  if(e.target.closest("a"))
+ {
+   e.target.style.color = "#e75aa1";
  }
 }
 
@@ -42,10 +50,20 @@ function closeAppointmentForm()
   const appointmentForm = document.querySelector(".appointment-container");
   const fullName = document.querySelector("#name");
   const email = document.querySelector("#email");
+  const message = document.querySelector("#mensaje");
+  const phoneNumber = document.querySelector("#phone");
+  const nameErrorMessage = document.querySelector("#nameError");
+ const emailErrorMessage = document.querySelector("#emailError");
   
   fullName.value="";
   email.value ="";
+  message.value ="";
+  phoneNumber.value ="";
   appointmentForm.classList.remove("openAppointmentForm");
+  
+  nameErrorMessage.style.display ="none";
+  emailErrorMessage.style.display="none";
+ 
 }
 
 function submitAppointment(e)
