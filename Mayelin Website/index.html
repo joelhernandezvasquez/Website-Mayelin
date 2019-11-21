@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
     <script src="main.js"> </script>
+     <script src="jquery-2.1.0.min.js"></script> 
+	
 </head>
 
 <body>
@@ -50,6 +52,9 @@
         </ul>
     </div>
 
+   
+    <div id="form-messages"></div>
+
     <div class="appointment-container">
      
          <input type="image" src="img/iconfinder_basics-22_296812.png" id="close-icon">
@@ -58,7 +63,7 @@
            <h1>Haz Tu Cita</h1>
            <h2>llama al 809-447-9942</h2>
         
-           <form action="#" method="post" id="form-appointment" >
+           <form action="mailer.php" method="post" id="form-appointment" >
 
           
            <label for="name">Nombre:</label>
@@ -81,7 +86,7 @@
            <p class="error-message" id="emailError"> *Por favor introdusca su email</p>
            
            <label for="mensaje"> Mensaje: </label>
-           <textarea id="mensaje">
+           <textarea id="mensaje" name="mensaje">
 
            </textarea>
  

@@ -74,6 +74,16 @@ function submitAppointment(e)
  const emailErrorMessage = document.querySelector("#emailError");
   const name = fullName.value.trim();
   const emailInput = email.value.trim();
+ 
+
+  //Get the form.
+   var form = $('#form-appointment');
+  
+  //Get the messages div.
+   var formMessages = $('#form-messages');
+  
+  // Serialize the form data.
+  var formData = $(form).serialize();
 
  if(!name)
  {
@@ -85,6 +95,7 @@ function submitAppointment(e)
  else
  {
   nameErrorMessage.style.display ="none";
+  
  }
 
  if(!emailInput)
@@ -97,8 +108,29 @@ function submitAppointment(e)
  {
   emailErrorMessage.style.display ="none";
  }
+
+
+// Submit the form using AJAX.
+  $.ajax({
+  type: 'POST',
+  url: $(form).attr('action'),
+  data:formData
+ })
+
+ .done(function (response){
+
+  alert("se envio");
+})
+
+.fail(function (data){
+
+  alert("fallo");
+})
+
  
 }
+
+
 
 function openGallerySlideShow(e)
 {
