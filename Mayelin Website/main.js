@@ -76,14 +76,6 @@ function submitAppointment(e)
   const emailInput = email.value.trim();
  
 
-  //Get the form.
-   var form = $('#form-appointment');
-  
-  //Get the messages div.
-   var formMessages = $('#form-messages');
-  
-  // Serialize the form data.
-  var formData = $(form).serialize();
 
  if(!name)
  {
@@ -112,20 +104,31 @@ function submitAppointment(e)
 
 // Submit the form using AJAX.
   $.ajax({
+    dataType:"JSON",
   type: 'POST',
-  url: $(form).attr('action'),
-  data:formData
- })
+  url: "sendMail.php",
+  data:$("#form-appointment").serialize(),
 
- .done(function (response){
+  success:function(response){
+   
+    if(response){
+    if(response['signal']=='ok')
+    {
+      alert("Success" +" " + response['msg']);
+    }
+    else
+    {
+      alert("Fail" +" " + response['msg']); 
+    }
+    }
+  },
+  error:function(response){
+   // alert("Fail" + response);
+  }
 
-  alert("se envio");
-})
+ });
 
-.fail(function (data){
-
-  alert("fallo");
-})
+ 
 
  
 }
